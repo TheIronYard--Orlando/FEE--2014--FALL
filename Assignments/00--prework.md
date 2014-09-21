@@ -10,11 +10,11 @@
         * [x] A picture, so I can recognize your face.
         * [x] Your full name, so I can recognize your name.
         * [x] A valid public email address, so I can contact you if I need to.
-    * [ ] Find and star [the class project](https://github.com/TheIronYard--Orlando/FEE--2014--FALL)
-* [ ] [Install Hipchat](https://www.hipchat.com/download)
-    * [ ] [Create your account](https://www.hipchat.com/invite/31349/a142a6025f7a427bd4813063bea8b0d1)
-    * [ ] Login with your credentials for The Iron Yard.
-    * [ ] Join the room for the class: "Orlando - Acacdemy - JS - Sep 2014"
+    * [x] Find and star [the class project](https://github.com/TheIronYard--Orlando/FEE--2014--FALL)
+* [x] [Install Hipchat](https://www.hipchat.com/download)
+    * [x] [Create your account](https://www.hipchat.com/invite/31349/a142a6025f7a427bd4813063bea8b0d1)
+    * [x] Login with your credentials for The Iron Yard.
+    * [x] Join the room for the class: "Orlando - Acacdemy - JS - Sep 2014"
 * [ ] [Install XCode](https://itunes.apple.com/us/app/xcode/id497799835) and the XCode Command Line Tools
     * [ ] Open `Terminal.app`; Don't Panic.
     * [ ] Type `xcode-select --install` and press enter.
