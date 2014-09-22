@@ -10,3 +10,8 @@
   * [ ] [Open an issue in the Class Project](http://github.com/TheIronYard--Orlando/FEE--2014--FALL/issues/new)
     * Put these todos into that issue.
     * Add a link to your file as a comment when you're ready to review.
+
+The sample text:
+
+> Lorem ipsum dolor sit amet...
+
