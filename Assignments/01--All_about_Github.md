@@ -2,6 +2,7 @@
 * [ ] Work through Git Branching (add link)
 * [ ] Find and fork an Open Source Project written in JavaScript
 * [ ] [Create your own Repository in Github](https://github.com/new) called `TIY-Assignments`
+  * Be sure to add a `README` file when you create the repository! (What does this do?)
   * [ ] Complete the "Editing" example...
     * Create a file inside your repository called `01--All_about_Github.md`
     * Copy the text below into your new file.
