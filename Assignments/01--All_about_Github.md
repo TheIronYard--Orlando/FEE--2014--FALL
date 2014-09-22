@@ -1,5 +1,5 @@
 * [ ] Work through [Try GitHub](http://try.github.io/)
-* [ ] Work through Git Branching (add link)
+* [ ] Work through [Learn Git Branching](http://pcottle.github.io/learnGitBranching/)
 * [ ] Find and fork an Open Source Project written in JavaScript
 * [ ] [Create your own Repository in Github](https://github.com/new) called `TIY-Assignments`
   * Be sure to add a `README` file when you create the repository! (What does this do?)
