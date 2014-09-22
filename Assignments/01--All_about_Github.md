@@ -1,3 +1,5 @@
+## All About Github
+
 * [ ] Work through [Try GitHub](http://try.github.io/)
 * [ ] Work through [Learn Git Branching](http://pcottle.github.io/learnGitBranching/)
 * [ ] Find and fork an Open Source Project written in JavaScript
@@ -11,6 +13,9 @@
   * [ ] [Open an issue in the Class Project](http://github.com/TheIronYard--Orlando/FEE--2014--FALL/issues/new)
     * Put these todos into that issue.
     * Add a link to your file as a comment when you're ready to review.
+* For practice typing (as if creating issues wasn't enough):
+ * Typing practice for Programmers: https://typing.io/
+ * Touch typing practice: http://www.keybr.com/
 
 ### Example text (taken from http://www.grammar-quizzes.com/):
 
