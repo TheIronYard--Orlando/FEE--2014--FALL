@@ -18,3 +18,11 @@
   * [ ] Use Jekyll to rebuild the site as you edit: `jekyll build --watch`
   * [ ] Use the "Apache" run target to view your site: `Run > Run with... > Apache + PHP`
 * [ ] Create some posts!
+  * [ ] Create a new branch for your work in progress: `git checkout -b feature/jekyll-site`
+  * [ ] Follow the instructions in [Jekyll: Directory Structure](http://jekyllrb.com/docs/structure/)
+  * [ ] Write a blog post about your first week at The Iron Yard!
+  * **Remember:** Commit often! (Set a timer?)
+* [ ] Push your branch to Github: `git push origin feature/jekyll-site --set-upstream`
+* [ ] Open a Pull Request in your repo _from_ the `feature/jekyll-site` branch _to_ the `master` branch.
+* **Extra Credit:** Add [a nice theme](http://lmgtfy.com/?q=jekyll+themes) to your Jekyll site!
+  * Check out what happens to your Pull Request when you push more commits into the `feature/jekyll-site` branch...!
