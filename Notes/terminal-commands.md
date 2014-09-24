@@ -13,4 +13,10 @@ $> ls -Al
 $> ls -Alh
 ```
 
-* The `ls` command... (fill in the blanks)
+The `ls` command... (fill in the blanks)
+
+```shell
+$> help
+$> help <command>
+```
+The help command lists the most commonly used git commands. For detailed information about a specific command, then enter it trailing the help command. Use the F key to move the help menu forward and B to move backward. Press Q to exit the help menu.
