@@ -13,4 +13,12 @@ $> ls -Al
 $> ls -Alh
 ```
 
-* The `ls` command... (fill in the blanks)
+
+* The `ls` command... (list files in current directory using long format)
+
+cd dir – Change directory to dir
+cd – Change to home
+mkdir dir – Create a directory dir
+pwd – Show current directory
+reset - clears terminal
+
