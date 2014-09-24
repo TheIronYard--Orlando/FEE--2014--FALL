@@ -8,8 +8,9 @@
   * [ ] Follow the instructions in TheIronYard--Orlando/FEE--2014--FALL#63
   * [ ] Collaborate!
 * [ ] Trick out your Github pages with a Jekyll theme...
+  * Make sure you have merged all your feature branches with Pull Requests first!
   * [ ] Create a new branch for this work based on `master`
-    * Check out the `master` branch again.
+    * Check out the `master` branch again and use `git pull` to get your work from Github.
     * Create a new branch named `feature/jekyll-theme`.
     * Check out the new `feature/jekyll-theme` branch.
   * [ ] Convert `index.html` into a simple Jekyll template...
