@@ -16,10 +16,11 @@
   * [ ] Convert `index.html` into a simple Jekyll template...
     * [ ] Create an `index.md` file in the project root.
     * [ ] Take everything from the _middle_ of `index.html`, rewrite in Markdown, put into `index.md`
+    * [ ] Add two lines to the front of `index.md` with three dashes (`---`) each, called [YAML Frontmatter](http://jekyllrb.com/docs/frontmatter/).
     * [ ] Create a folder in project root called `_layouts`.
     * [ ] Move the `index.html` file into `_layouts/default.html`.
     * [ ] Try to rebuild your site with `jekyll build`; what happens? Comment on this...
-    * [ ] Replace the "middle" of `index.html` with `{{content}}`
+    * [ ] Put `{{content}}` into the _middle_ of `_layouts/default.html` (where you took `index.md` out).
     * [ ] Build your site with `jekyll build`; what happens? Comment on this...
   * [ ] Push to Github; open a PR; link your PR to your issue.
   * [ ] Edit your `index.md` file to link your posts using Markdown (and server-relative URLs).
