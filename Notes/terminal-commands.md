@@ -13,4 +13,21 @@ $> ls -Al
 $> ls -Alh
 ```
 
-* The `ls` command... (fill in the blanks)
+* `ls` lists the files in the current working directory
+* `ls -A` lists invisible files (i.e. dotfiles)
+* `ls -Al` lists extra information about the files in the current working directory. Things like: permissions, file size, time of last modification, etc
+
+
+```shell
+$> pwd
+```
+
+* `pwd` aka *where am I*? prints the working directory
+
+```shell
+$> cd
+```
+
+* `cd` changes directory
+
+
