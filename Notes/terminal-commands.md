@@ -16,7 +16,6 @@ $> ls -Alh
 
 * The `ls` command... (list files in current directory using long format)
 
-
 cd dir – Change directory to dir
 cd – Change to home
 mkdir dir – Create a directory dir
