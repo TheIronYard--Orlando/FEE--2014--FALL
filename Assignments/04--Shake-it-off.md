@@ -14,7 +14,7 @@
     * [ ] Checkout `master` on C9
     * [ ] Create a local branch called `old-master` based on `master`
     * [ ] Push `old-master` to Github
-  * [ ] Rewind the world... ![Just like Superman](http://38.media.tumblr.com/tumblr_lr7uxutHzA1qhbarso1_400.gif)
+  * [ ] Rewind the world... <br> ![Just like Superman](http://38.media.tumblr.com/tumblr_lr7uxutHzA1qhbarso1_400.gif)
     * [ ] Find the initial commit to your Github Pages repository.
     * [ ] Use `git reset --hard` to set local `master` to that commit.
     * [ ] Ensure that you _only_ have the following files in your working tree:
