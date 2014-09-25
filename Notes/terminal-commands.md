@@ -18,7 +18,7 @@ $> ls -Alh
 * When displaying URLs, ```http://www.starwars.com``` becomes http://www.starwars.com
 
 * [ ] This is a checkbox
-* [ ] Another checkbox
+* [X] Another (checked) checkbox
 
 More terminal commands:
 
