@@ -16,3 +16,12 @@ $> ls -Alh
 * The `ls` command lists files
 
 * When displaying URLs, ```http://www.starwars.com``` becomes http://www.starwars.com
+
+* [ ] This is a checkbox
+* [ ] Another checkbox
+
+More terminal commands:
+
+* `PWD` Print Working Directory
+* `cd` Change Directory
+
