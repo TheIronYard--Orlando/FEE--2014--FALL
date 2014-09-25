@@ -13,4 +13,6 @@ $> ls -Al
 $> ls -Alh
 ```
 
-* The `ls` command... (fill in the blanks)
+* The `ls` command lists files
+
+* When displaying URLs, ```http://www.starwars.com``` becomes http://www.starwars.com
