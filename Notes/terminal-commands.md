@@ -14,3 +14,18 @@ $> ls -Alh
 ```
 
 * The `ls` command... (fill in the blanks)
+* lists what you're searching for, like you're looking inside a certain director. 
+```
+$> ls downloads
+```
+for example, will list all the files in the 'Downloads' folder on your mac. 
+
+```shell
+$> q
+```
+when you want to exit a block of information you might have searched for, like when you're done reading help text in the terminal and want to return to the prompt line. 
+```
+$> clear
+```
+Clears the terminal of previous commands so you have an empty screen to look at
+
