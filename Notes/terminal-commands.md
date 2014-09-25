@@ -14,3 +14,24 @@ $> ls -Alh
 ```
 
 * The `ls` command... (fill in the blanks)
+
+```
+$> git add . 
+$> git add --all
+$> git pull
+$> git pull -f
+$> git push
+$> git push -f
+$> cd <directory name>
+$> cd ~
+$> git commit
+$> git commit -m
+$> git init
+$> git status
+$> git checkout -b 
+$> git checkout branch
+$> -h
+$> -w
+$> jekyll build
+
+```
