@@ -13,4 +13,19 @@ $> ls -Al
 $> ls -Alh
 ```
 
-* The `ls` command... (fill in the blanks)
+* The `ls` command lists files in your current location (directory).
+
+```shell
+$> pwd
+```
+
+* `pwd` displays your current location.
+
+```shell
+$> cd / 
+$> cd ~
+$> cd ..
+$> cd - 
+```
+
+* The `cd` command is used to change directories.
