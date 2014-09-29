@@ -27,22 +27,22 @@
 
 Surround your code with code fences (backticks) and use the name `javascript` to tell Github to color it like JavaScript (I only put the spaces in the example so that Github doesn't get confused within this document):
 
-```markdown
- ```javascript
- var count = 0;
- ```
- 
- * Variable: `count`
- * Value: Number 0
- 
- ~~~
- 
- ```javascript
- count = count + 1;
- ```
- 
- * Operators: `=`, `+`
- * Variable `count` is `1`...?
+<pre><code>
+```javascript
+var count = 0;
 ```
+ 
+* Variable: `count`
+* Value: Number 0
+ 
+~~~
+ 
+```javascript
+count = count + 1;
+```
+ 
+* Operators: `=`, `+`
+* Variable `count` is `1`...?
+</code></pre>
 
 As above, write a couple of bullets describing the code that you identify: type, operators, etc... whatever you can identify. You should find at least 10 examples, but don't stop there. Ask for help in identifying pieces you don't understand yet, and go back to Code School for more instruction.
