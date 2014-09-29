@@ -14,6 +14,11 @@
     * [ ] Create a file in your `TIY-Asignments` repository called `Reading-JavaScript.md`
     * [ ] For every occurrance of our reading terms, provide a code block like the example below describing what you've found.
     * [ ] Make sure you have at least 10, but the more the merrier.
+  * Turn in instructions...
+    * [ ] Open a PR in your `TIY-Assignments` repository _from_ branch `05--Reading-JavaScript` _to_ `master`.
+    * [ ] Add a comment to that PR with a link to your WIP issue.
+    * [ ] Solicit peer review from your team; you need at least 2x :+1: (`:+1:`, `:thumbsup:`) to merge.
+    * [ ] Merge into `master` once approved and delete the branch.
 * [ ] Laying the ground work for local development...
   * [ ] Install [Homebrew Package Manager](http://brew.sh)
   * [ ] With `brew` install the `nvm` package (and follow all the instructions): `brew install nvm`
