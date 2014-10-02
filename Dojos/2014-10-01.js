@@ -1,6 +1,8 @@
 var assert = require('assert');
 
 function test(actual, expected, success){
+    success = success || 'pass!';
+
     assert(actual === expected) || console.log(success);
 }
 
