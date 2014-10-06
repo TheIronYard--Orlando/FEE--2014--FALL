@@ -166,52 +166,73 @@ function test(actual, expected, message){
 test.tests = 0;
 test.passes = 0;
 
-assert(toEnglish);
-var testCases = [
-    [0, 'zero'],
-    [1, 'one'],
-    [2, 'two'],
-    [3, 'three'],
-    [4, 'four'],
-    [5, 'five'],
-    [6, 'six'],
-    [7, 'seven'],
-    [8, 'eight'],
-    [9, 'nine'],
-    [10, 'ten'],
-    [11, 'eleven'],
-    [12, 'twelve'],
-    [13, 'thirteen'],
-    [14, 'fourteen'],
-    [15, 'fifteen'],
-    [16, 'sixteen'],
-    [17, 'seventeen'],
-    [18, 'eighteen'],
-    [19, 'nineteen'],
-    [20, 'twenty'],
-    [21, 'twenty one'],
-    [22, 'twenty two'],
-    [23, 'twenty three'],
-    [24, 'twenty four'],
-    [25, 'twenty five'],
-    [26, 'twenty six'],
-    [27, 'twenty seven'],
-    [28, 'twenty eight'],
-    [29, 'twenty nine'],
-    // [30, 'thirty' ],
-    // [31, 'thirty one'],
-    // [32, 'thirty two'],
-    // [33, 'thirty three'],
-    // [34, 'thirty four'],
-    // [35, 'thirty five'],
-    // [36, 'thirty six'],
-    // [37, 'thirty seven'],
-    // [38, 'thirty eight'],
-    // [39, 'thirty nine'],
-    // [40, 'forty'],
-];
+describe('toEnglish(), which converts Number to English strings', function(){
+    it('should have a function named toEnglish()', function(){
+        assert(toEnglish);
+    });
 
-for ( var index = 0; index < testCases.length; index++ ){
-    test(testCases[index][0], testCases[index][1]);
-}
-console.log('passed ' + test.passes + ' of ' + test.tests + ' tests');
+    var testCases = [
+    // /* // SLICE!
+        [0, 'zero'],
+        [1, 'one'],
+        [2, 'two'],
+        [3, 'three'],
+        [4, 'four'],
+        [5, 'five'],
+        [6, 'six'],
+        [7, 'seven'],
+        [8, 'eight'],
+        [9, 'nine'],
+        [10, 'ten'],
+    /* // SLICE!
+        [11, 'eleven'],
+        [12, 'twelve'],
+        [13, 'thirteen'],
+        [14, 'fourteen'],
+        [15, 'fifteen'],
+        [16, 'sixteen'],
+        [17, 'seventeen'],
+        [18, 'eighteen'],
+        [19, 'nineteen'],
+        [20, 'twenty'],
+        [21, 'twenty one'],
+        [22, 'twenty two'],
+        [23, 'twenty three'],
+        [24, 'twenty four'],
+        [25, 'twenty five'],
+        [26, 'twenty six'],
+        [27, 'twenty seven'],
+        [28, 'twenty eight'],
+        [29, 'twenty nine'],
+        // [30, 'thirty' ],
+        // [31, 'thirty one'],
+        // [32, 'thirty two'],
+        // [33, 'thirty three'],
+        // [34, 'thirty four'],
+        // [35, 'thirty five'],
+        // [36, 'thirty six'],
+        // [37, 'thirty seven'],
+        // [38, 'thirty eight'],
+        // [39, 'thirty nine'],
+        // [40, 'forty'],
+    // */ // SLICE!
+    ];
+
+    // Iteration
+    // var index = 0; while ( index < testCases.length ){ index ++; }
+    //for ( var index = 0; index < testCases.length; index++ ){
+    testCases.forEach(forEachTestCase);
+
+    function forEachTestCase (testCase, index, testCases){
+        //console.log('inside forEach: ', testCase, index);
+        message = 'should convert ' +
+            testCases[index][0] + ' to ' + testCases[index][1];
+
+        it(message, function(){
+            //console.log('inside of it(): ', index, testCases[index]);
+            test(testCases[index][0], testCases[index][1]);
+        });
+    }
+    //console.log('passed ' + test.passes + ' of ' + test.tests + ' tests');
+// */
+}); // END describe(toEnglish)
