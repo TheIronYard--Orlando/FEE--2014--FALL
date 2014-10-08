@@ -1,7 +1,7 @@
 /** ==== CODE! ==== **/
 function num2Words(dollars){
     var suffix = " dollars";
-    dollars = Number(dollars).toFixed(2); 
+    //dollars = Number(dollars).toFixed(2); 
 
     var ones =  [ "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen" ]
     var tens = [ "zero", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety" ]
@@ -9,21 +9,22 @@ function num2Words(dollars){
     var thousands = ["zero", "one thousand", "two thousand", "three thousand", "four thousand", "five thousand", "six thousand", "seven thousand", "eight thousand", "nine thousand"]; 
  
    
-dollars = dollars.toString();
-var cents = dollars.slice(-2);
-var dollars = dollars.slice(0, -3)
+//dollars = dollars.toString();
+//var cents = dollars.slice(-2);
+var dollars = dollars.slice(0, -3);
 var english = cents + '/100s dollars';
 
 
+    
 
-   if (dollars <= 20){
-       ones.push('ones');
+   if (dollars <= 20.00){
        return "You entered " + ones[1] + " and " + english;
-       
-    }
+   }
+   
    if (dollars < 100){
        return "You entered " + tens[0] + " " + ones[1] + " dollars and " + english; 
-     }
+   }
+   
    if (dollars % 10 === 0){
        return "You entered " + tens[0] + ones[1] + "dollars and " + english;
    }
@@ -31,8 +32,11 @@ var english = cents + '/100s dollars';
    // if dollars % 10 === 0){
       //  return "You entered " + dollars + " dollars and " + english;
   // }
+
 }
   // return english;
+  
+  
    
    
    
