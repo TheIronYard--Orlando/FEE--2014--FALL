@@ -8,3 +8,7 @@ var cents = value.slice(-2); //creates a cents variable so that I can seperate t
                             //and hold it for when it is called. Ex "10.25" = "25"
 var centsWords = "dollars & " + cents + "/100s"; // creates a variable to use for printout of string to save typing Ex 1.25 = "one dollars & 25/100s
 
+var ones = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen",
+"fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
+
+var tens = ["zero", "ten", "twenty", "thirty"]
