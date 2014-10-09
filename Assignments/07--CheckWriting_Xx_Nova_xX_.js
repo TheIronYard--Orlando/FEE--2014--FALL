@@ -28,7 +28,7 @@ function num2Words(money){
             if (money % 10 === 0){
                 return tens[value[0]] + " " + centsWords;
             }
-            return tens[value[0] ] + " " + ones[ value[1] ] + centsWords;
+            return tens[value[0] ] + " " + ones[ value[1] ] + " " + centsWords;
         }
 
             if (money < 1000){
@@ -36,28 +36,28 @@ function num2Words(money){
                     return hundreds[value[0]] + " " + centsWords;
                 }
                     if (money % 10 === 0){
-                    return hundreds[value[0]] + tens[value[1]] + " " + centsWords;
+                    return hundreds[value[0]] + " " + tens[value[1]] + " " + centsWords;
                     }
             
                         if (value[1] < 2) {   //hundreds digits, _10 < x < _20
-                         return hundreds[ value[0] ] +" "+ tens[value[2]] + centsWords;
+                         return hundreds[ value[0] ] +" "+ tens[value[2]] +" "+  centsWords;
                         }
                         
-            return hundreds[value[0]] +" "+ tens[value[1]] +" "+ ones[value[2]] + centsWords;
+            return hundreds[value[0]] +" "+ tens[value[1]] +" "+ ones[value[2]] +" "+  centsWords;
             }
             
                     if (money < 10000){
                         if (money % 1000 === 0){
                             return(thousands[value[0]]+ " " + centsWords);}
                           if (money % 100 === 0){
-                              return(thousands[value[0]] +" "+ hundreds[value[1]] + centsWords);}
+                              return(thousands[value[0]] +" "+ hundreds[value[1]] +" "+  centsWords);}
                             if (money % 10 === 0){
-                                return(thousands[value[0]] +" "+ hundreds[value[1]] +" "+ tens[value[2]] + centsWords);}
+                                return(thousands[value[0]] +" "+ hundreds[value[1]] +" "+ tens[value[2]] +" "+  centsWords);}
                               if (value[1] < 1) {
-                                  return(thousands[value[0]] + " " + tens[value[2]] + " " + ones[value[3]] + centsWords);}
+                                  return(thousands[value[0]] + " " + tens[value[2]] + " " + ones[value[3]] +" "+  centsWords);}
                                 if (value[2] < 2) {
-                                    return(thousands[value[0]] +" "+ hundreds[value[1]] +" "+ teens[value[3]] + centsWords);}
-                        return(thousands[value[0]] +" "+ hundreds[value[1]] +" "+ tens[value[2]] +" "+ ones[value[3]] + centsWords)
+                                    return(thousands[value[0]] +" "+ hundreds[value[1]] +" "+ teens[value[3]] +" "+ centsWords);}
+                        return(thousands[value[0]] +" "+ hundreds[value[1]] +" "+ tens[value[2]] +" "+ ones[value[3]] +" "+  centsWords)
   }
     }
    
@@ -85,6 +85,9 @@ console.log('got here!');
 
 
 testHelper(1, "one dollars & 00/100s");
-//testHelper(50, "fifty dollars & 00/100s");
+testHelper(50, "fifty dollars & 00/100s");
+testHelper(54.31, "fifty four dollars & 31/100s");
 testHelper(500, "five hundred dollars & 00/100s");
 testHelper(5000, "five thousand dollars & 00/100s");
+testHelper(9027.20, "nine thousand twenty seven dollars & 20/100s");
+
