@@ -47,11 +47,16 @@ function num2Words(money){
             }
             
                     if (money < 10000){
-                        if (money % 1000 === 0){return(thousands[value[0]]+ " " + centsWords);}
-                          if (money % 100 === 0){return(thousands[value[0]] +" "+ hundreds[value[1]] + centsWords);}
-                            if (money % 10 === 0){return(thousands[value[0]] +" "+ hundreds[value[1]] +" "+ tens[value[2]] + centsWords);}
-                              if (value[1] < 1) {return(thousands[value[0]] + " " + tens[value[2]] + " " + ones[value[3]] + centsWords);}
-                                if (value[2] < 2) {return(thousands[value[0]] +" "+ hundreds[value[1]] +" "+ teens[value[3]] + centsWords);}
+                        if (money % 1000 === 0){
+                            return(thousands[value[0]]+ " " + centsWords);}
+                          if (money % 100 === 0){
+                              return(thousands[value[0]] +" "+ hundreds[value[1]] + centsWords);}
+                            if (money % 10 === 0){
+                                return(thousands[value[0]] +" "+ hundreds[value[1]] +" "+ tens[value[2]] + centsWords);}
+                              if (value[1] < 1) {
+                                  return(thousands[value[0]] + " " + tens[value[2]] + " " + ones[value[3]] + centsWords);}
+                                if (value[2] < 2) {
+                                    return(thousands[value[0]] +" "+ hundreds[value[1]] +" "+ teens[value[3]] + centsWords);}
                         return(thousands[value[0]] +" "+ hundreds[value[1]] +" "+ tens[value[2]] +" "+ ones[value[3]] + centsWords)
   }
     }
