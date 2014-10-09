@@ -4,9 +4,6 @@ var ones = ["zero", "one", "two", "three", "four", "five", "six",
 "fourteen", "fifteen", "sixteen", "seventeen", "eighteen",
 "nineteen"];
 
-var teens = ["zero", "eleven", "twelve", "thirteen", "fourteen",
-"fifteen", "sixteen", "seventeen", "eighteen", "nineteen"]
-
 var tens = ["zero", "ten", "twenty", "thirty", "forty", "fifty",
 "sixty", "seventy", "eighty", "ninety"];
 
@@ -23,7 +20,7 @@ function num2Words(money){
   var value = money.toString(); // "1"
   value = Number(value).toFixed(2); // "1.00"
   
-  var cents = value.slice(-2)// "00"
+  var cents = value.slice(-2);// "00"
   var dollars = value.slice(0,-3);// [ "1" ]
   var centsWords = " dollars & " + cents + '/100s'; // " dollars & 00/100s"
 
@@ -49,7 +46,7 @@ function num2Words(money){
         return hundreds[value[0]]+" "+ tens[value[1]] + centsWords;
         }
           if (value[1] < 2) {   //hundreds digits, _10 < x < _20
-          return hundreds[value[0]] +" "+ teens[value[2]] + centsWords;
+          return hundreds[ value[0] ] +" "+ teens[value[2]] + centsWords;
           }
       return hundreds[value[0]] +" "+ tens[value[1]] +" "+ ones[value[2]] +centsWords;
     }
