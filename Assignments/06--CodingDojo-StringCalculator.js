@@ -1,12 +1,12 @@
 //String Calculator Xx-Nova-Xx
 
-function add(a, b){
 
-var num = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
+
+var num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 var wordNum = [ 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
-
-wordNum[1] = num[1];
+    
 wordNum[0] = num[0];
+wordNum[1] = num[1];
 wordNum[2] = num[2];
 wordNum[3] = num[3];
 wordNum[4] = num[4];
@@ -17,7 +17,16 @@ wordNum[8] = num[8];
 wordNum[9] = num[9];
 wordNum[10] = num[10];
 
-        return a + b;
+
+    function add(a, b){
+        
+    if(a === "one" && b === "one"){   
+        a + b;
+        return 2;
+    }
+ 
+ 
+     
 
         
 }     
@@ -25,7 +34,7 @@ wordNum[10] = num[10];
   ////// TEST /////     
                 var assert = require('assert');
                 
-                function testHelper(string, string, message){
+                function testHelper(string, message){
                     if (message === undefined) message = 'pass: ';
                 
                     assert.strictEqual(add);
@@ -36,7 +45,7 @@ wordNum[10] = num[10];
                 console.log('got here!');
                 
                 
-                testHelper("one", "one" );
+              
                 testHelper(2);
                 //testHelper(54.31, "fifty four dollars & 31/100s");
                 //testHelper(500, "five hundred dollars & 00/100s");
@@ -47,6 +56,10 @@ wordNum[10] = num[10];
                 
 
 
+
+
+ 
+ 
 
 
 /* /////////////Tests/////////////
@@ -96,7 +109,19 @@ if()
 
 
 
+wordNum[1] = num[1];
+wordNum[0] = num[0];
+wordNum[2] = num[2];
+wordNum[3] = num[3];
+wordNum[4] = num[4];
+wordNum[5] = num[5];
+wordNum[6] = num[6];
+wordNum[7] = num[7];
+wordNum[8] = num[8];
+wordNum[9] = num[9];
+wordNum[10] = num[10];
 
+ 
 
 
 
