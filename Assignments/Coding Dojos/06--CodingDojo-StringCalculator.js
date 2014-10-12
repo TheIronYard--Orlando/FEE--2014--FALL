@@ -1,37 +1,39 @@
 //String Calculator Xx-Nova-Xx
 
 
+function add(a, b){
 
-var num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-var wordNum = [ 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
+    var num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    var wordNum = [ 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
+        
+    wordNum[0] = num[0];
+    wordNum[1] = num[1];
+    wordNum[2] = num[2];
+    wordNum[3] = num[3];
+    wordNum[4] = num[4];
+    wordNum[5] = num[5];
+    wordNum[6] = num[6];
+    wordNum[7] = num[7];
+    wordNum[8] = num[8];
+    wordNum[9] = num[9];
+    wordNum[10] = num[10];
     
-wordNum[0] = num[0];
-wordNum[1] = num[1];
-wordNum[2] = num[2];
-wordNum[3] = num[3];
-wordNum[4] = num[4];
-wordNum[5] = num[5];
-wordNum[6] = num[6];
-wordNum[7] = num[7];
-wordNum[8] = num[8];
-wordNum[9] = num[9];
-wordNum[10] = num[10];
-
-
-    function add(a, b){
-        
-    if(a === "one" && b === "one"){   
-        a + b;
-        return 2;
-    }
- 
+    console.log("The value of a is " + a); 
+    console.log("The value of b is " + b);
+    
+            
+        //if(a === "one" && b === "one"){   
+          //  a + b;
+            //return 2;
+        }
+     
  
      
 
         
-}     
      
-  ////// TEST /////     
+     
+  /* ////// TEST /////     
                 var assert = require('assert');
                 
                 function testHelper(string, message){

@@ -10,7 +10,6 @@ var board = [
             ];
     
       /*
-     Just for me to visualize!
     
     ['0,0','0,1','0,2','0,3','0,4','0,5','0.6','0,7']
     ['1,0',                                         ]
@@ -42,11 +41,37 @@ var board = [
                 console.log(board.join('\n') + '\n\n');
                 
               //Black Pawn to E6
-              board[2][4] = board[0][4];
-                board[0][4] = ' ';
+              board[2][4] = board[1][4];
+                board[1][4] = ' ';
+                console.log(board.join('\n') + '\n\n');
+              
+              //White Pawn to G3
+              board[5][6] = board[6][6];
+                board[6][6] = ' '; 
                 console.log(board.join('\n') + '\n\n');
                 
-
+              //Black Pawn to D5
+              board[3][3] = board[1][3];
+                board[1][3] = ' ';
+                console.log(board.join('\n') + '\n\n');
+              
+              //White Bishop to G2
+              board[6][6] = board[7][5];
+                board[7][5] = ' ';
+                console.log(board.join('\n') + '\n\n');
+              
+              //Black Bishop to E7
+              board[1][4] = board[0][5];
+                board[0][5] = ' ';
+                console.log(board.join('\n') + '\n\n');
+              
+              //White Knight to F3 **CheckMate**
+              board[5][5] = board[7][6];
+                board[7][6] = ' ';
+                console.log(board.join('\n') + '\n\n');
+              
+                
+              
 
 
 
