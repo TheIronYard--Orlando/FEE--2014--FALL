@@ -44,3 +44,4 @@
 * [Game Development by Ellison Leão | ZEEF](https://game-development.zeef.com/ellison.leao)
 * [Corey Haines on Vimeo](http://vimeo.com/coreyhaines)
 * [10 open source projects every JavaScript geo dev should know about | ArcGIS Blog](http://blogs.esri.com/esri/arcgis/2014/01/23/10-open-source-projects-every-javascript-geo-dev-should-know-about/)
+* [How To Keep Up To Date On Front End Technologies](http://uptodate.frontendrescue.org/)
