@@ -16,39 +16,49 @@
 ### Reading JavaScript (50)
 * Add 10 more examples of JavaScript OBJECTS
 * Look for:
-    * `Capitalized` function definitions (Constructors)
-    * using the `new` keyword
-    * all them `prototypes` everywhere
+   * `Capitalized` function definitions (Constructors)
+   * using the `new` keyword
+   * all them `prototypes` everywhere
 * Use the format below...
 
 
 ### Chessboard Interface
 
 * `@constructor Chess`: Setup a `board` with `Pieces` representing an initial chessboard.
-    * `@method getPlayer()`
-        * `@return String either "white" or "black" representing current player`
-    * `@method display()`
-        * `@return String representation of board`
-    * `@method move(piece, destination)`: Move `piece` to `destination` and...?
-       * `@param Piece piece to move`
-       * `@param Position destination to move piece to`
-    * `@method opening()`: Advance the `board` to [Catalan Opening, Closed Variation](http://j.mp/1BSJj9W)
+   * `@method getPlayer()`
+      * `@return String either "white" or "black" representing current player`
+   * `@method move(piece, destination)`: Move `piece` to `destination` and...?
+      * `@param Piece piece to move`
+      * `@param Position destination to move piece to`
+   * `@method opening()`: Advance the `board` to [Catalan Opening, Closed Variation](http://j.mp/1BSJj9W)
+   * `@method display()`
+      * `@return String representation of board`
+```javascript
+R,N,B,Q,K,B,N,R
+P,P,P,P,P,P,P,P
+ , , , , , , ,
+ , , , , , , ,
+ , , , , , , ,
+ , , , , , , ,
+p,p,p,p,p,p,p,p
+r,n,b,q,k,b,n,r
+```
 * `@constructor Position(x,y)`: Represent a position on a chessboard with coordinates
-    * usage: `new Position(1,1)`
-    * `@property Number x coordinate`
-    * `@property Number y coordinate`
+   * usage: `new Position(1,1)`
+   * `@property Number x coordinate`
+   * `@property Number y coordinate`
 * `@constructor Piece(name, color)`: Represent a chesspiece on the `board` with `name` and `color` and appropriate starting position
-    * usage: `new Piece('Queen', 'black')`
-    * `@method getName()`
-        * `@return String name of Piece, e.g. 'Queen', 'Pawn'`
-    * `@method getColor()`:
-        * `@return String player 'black' or 'white'`
-    * `@method setPosition(position)`: Set `Piece` to `position` on board
-        * `@param Position position`
-    * `@method toString()`
-        * `@return String representation of Piece`
-        * example: `"Q" === String(new Piece("Queen", "white"))`
-        * example: `"r" === String(new Piece("Rook", "black"))`
+   * usage: `new Piece('Queen', 'black')`
+   * `@method getName()`
+      * `@return String name of Piece, e.g. 'Queen', 'Pawn'`
+   * `@method getColor()`:
+      * `@return String player 'black' or 'white'`
+   * `@method setPosition(position)`: Set `Piece` to `position` on board
+      * `@param Position position`
+   * `@method toString()`
+      * `@return String representation of Piece`
+      * example: `"Q" === String(new Piece("Queen", "white"))`
+      * example: `"r" === String(new Piece("Rook", "black"))`
 
 ### Reading JavaScript
 
