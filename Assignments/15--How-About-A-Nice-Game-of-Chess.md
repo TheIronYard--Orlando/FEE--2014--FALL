@@ -19,11 +19,15 @@ Also - look at the number of closed issues in that repo. Look at the number of b
 
 ### How About a Nice Game of Chess?
 
-* The Catalan opening is nice and all as an opening, but to really play chess you gotta capture stuff. It's also nice to know who's ahead at any point in the game. Oh, and being able to see the game would be fun. I'll give you a set of moves for a complete game, which starts with the Catalan opening and continues until checkmate. Feed that into yesterday's Chess object, making the following changes:
+The Catalan opening is nice and all as an opening, but to really play chess you gotta capture stuff. It's also nice to know who's ahead at any point in the game. Oh, and being able to see the game would be fun. I'll give you a set of moves for a complete game, which starts with the Catalan opening and continues until checkmate. Feed that into yesterday's Chess object, making the following changes:
 
 * To figure out who's ahead at any moment, you need to calculate how much each player's pieces are worth. We'll use the most common assessment of point values:
 
-Pawn = 1, Knight = 3, Bishop = 3, Rook = 5, Queen = 9
+    * Pawn = 1
+    * Knight = 3
+    * Bishop = 3
+    * Rook = 5
+    * Queen = 9
 
 Don't just make the point value a property of the piece, though. Set up a separate value function that relates the name of a piece to its value. Then you can calculate a "score" for each side by adding up the point values of all the pieces for that side that are on the board at that moment.
 
