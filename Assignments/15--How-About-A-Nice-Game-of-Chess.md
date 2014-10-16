@@ -1,7 +1,7 @@
 ### Resources
 * [Lo-Dash] (https://lodash.com/docs)
 * [Chess]   (http://www.chessgames.com/perl/chessgame?gid=1765299)
-*[ Writing to a File(?)](https://docs.nodejitsu.com/articles/file-system/how-to-write-files-in-nodejs)
+* [ Writing to a File(?)](https://docs.nodejitsu.com/articles/file-system/how-to-write-files-in-nodejs)
 
 ### Roll Your Own
 
