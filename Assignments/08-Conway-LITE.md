@@ -5,7 +5,7 @@
     * Level 2: Conditional Canyon
     * Level 5: Array Archipelago
 * Coding Dojo
-  * Complete [`Dojos/2014-10-02.js`](/TheIronYard--Orlando/FEE--2014--FALL/blob/master/Dojos/2014-10-02.js)
+  * Complete [`Dojos/2014-10-02.js`](/blob/master/Dojos/2014-10-02.js)
   * To ensure that _both_ partners have a working solution, trade off when you pair!
   * Turn-in by opening a PR in your `TIY-Assignments` repo as usual.
 * Github Pages
