@@ -25,9 +25,9 @@ module.exports.Piece = Piece;
  * @property Number x coordinate
  * @property Number y coordinate
  */
-function Position(){
+function Position(x, y){
+    this.x = x;
 }
-
 /**
  * @constructor Piece
  *

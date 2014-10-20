@@ -11,7 +11,6 @@ describe('Position', function(){
     it('should have an x and y coordinates', function(){
         var aPosition = new Position(2,3);
         assert.strictEqual(aPosition.x, 2);
-
     });
 });
 
