@@ -1,4 +1,4 @@
-module.exports = {'Chess': Chess}
+module.exports.Chess = Chess;
 module.exports.Position = Position;
 module.exports.Piece = Piece;
 /**
