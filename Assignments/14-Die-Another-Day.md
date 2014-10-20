@@ -33,15 +33,25 @@
    * `@method opening()`: Advance the `board` to [Catalan Opening, Closed Variation](http://j.mp/1BSJj9W)
    * `@method display()`
       * `@return String representation of board`
-```javascript
-R,N,B,Q,K,B,N,R
-P,P,P,P,P,P,P,P
- , , , , , , ,
- , , , , , , ,
- , , , , , , ,
- , , , , , , ,
-p,p,p,p,p,p,p,p
-r,n,b,q,k,b,n,r
+```
++---+---+---+---+---+---+---+---+
+| R | N | B | Q | K | B | N | R | 
++---+---+---+---+---+---+---+---+
+| P | P | P | P | P | P | P | P | 
++---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   | 
++---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   | 
++---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   | 
++---+---+---+---+---+---+---+---+
+|   |   |   |   |   |   |   |   | 
++---+---+---+---+---+---+---+---+
+| p | p | p | p | p | p | p | p | 
++---+---+---+---+---+---+---+---+
+| r | n | b | q | k | b | n | r | 
++---+---+---+---+---+---+---+---+
+
 ```
 * `@constructor Position(x,y)`: Represent a position on a chessboard with coordinates
    * usage: `new Position(1,1)`
