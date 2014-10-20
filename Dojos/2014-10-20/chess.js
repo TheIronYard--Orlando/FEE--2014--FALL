@@ -1,5 +1,6 @@
 module.exports = {'Chess': Chess}
-module.exports.Position = Position
+module.exports.Position = Position;
+module.exports.Piece = Piece;
 /**
  * To build Chess:
  * - Pieces x 32
@@ -38,7 +39,9 @@ function Position(){
  * @method setPosition
  * @method toString
  */
+function Piece(){
 
+}
 /**
  * @constructor Chess
  *
