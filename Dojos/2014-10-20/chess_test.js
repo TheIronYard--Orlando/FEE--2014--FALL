@@ -1,16 +1,23 @@
 var Chess = require('./chess.js').Chess;
-var Position = require("./chess.js").Position;
+var newPosition = require("./chess.js").newPosition;
 var Piece = require("./chess.js").Piece;
 
 var assert = require('chai').assert;
 
 describe('Position', function(){
     it('should have a function Position()', function(){
-        assert.isFunction(Position, "STEPID!!");
+        assert.isFunction(newPosition, "STEPID!!");
     });
     it('should have an x and y coordinates', function(){
-        var aPosition = new Position(2,3);
+        var aPosition
+
+        aPosition = newPosition(2,3);
         assert.strictEqual(aPosition.x, 2);
+        assert.strictEqual(aPosition.y, 3);
+
+        aPosition = newPosition(1,5);
+        assert.strictEqual(aPosition.x, 1);
+        assert.strictEqual(aPosition.y, 5);
     });
 });
 

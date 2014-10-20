@@ -1,5 +1,5 @@
 module.exports.Chess = Chess;
-module.exports.Position = Position;
+module.exports.newPosition = newPosition;
 module.exports.Piece = Piece;
 /**
  * To build Chess:
@@ -25,8 +25,8 @@ module.exports.Piece = Piece;
  * @property Number x coordinate
  * @property Number y coordinate
  */
-function Position(x, y){
-    this.x = x;
+function newPosition(x, y){
+    return { "x" : x , "y" : y };
 }
 /**
  * @constructor Piece
