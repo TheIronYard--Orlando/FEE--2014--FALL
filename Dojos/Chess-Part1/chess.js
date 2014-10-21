@@ -66,17 +66,26 @@ Piece.prototype.setPosition = function(position){
 var Chess = module.exports.Chess = function Chess(){
     this.board = [ ];
 
-    var whiteQueenRook = new Piece('Rook', 'white');
+    /**
+     * This block and the next one are identical except for the identifier,
+     * the name and color of the piece, and the position assigned to it. How
+     * could we abstract?
+     */
+    { // BLOCK OF CONVENIENCE
+        var whiteQueenRook = new Piece('Rook', 'white');
 
-    whiteQueenRook.setPosition(8,'a');
+        whiteQueenRook.setPosition(new Position(8,'a'));
 
-    this.board.push(whiteQueenRook);
+        this.board.push(whiteQueenRook);
+    } // END BLOCK OF CONVENIENCE
 
-    var blackQueenRook = new Piece('Rook', 'black');
+    { // BLOCK OF CONVENIENCE
+        var blackQueenRook = new Piece('Rook', 'black');
 
-    blackQueenRook.setPosition(1,'a');
+        blackQueenRook.setPosition(new Position(1,'a'));
 
-    this.board.push(blackQueenRook);
+        this.board.push(blackQueenRook);
+    } // END BLOCK OF CONVENIENCE
 }
 
 Chess.prototype.pieceAt = function(x,y){
