@@ -2,11 +2,7 @@
   <head>
     <title>This is our rendering of The Iron Yard Orlando... Not quite.</title>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href='//fonts.googleapis.com/css?family=Just+Me+Again+Down+Here' rel='stylesheet' type='text/css'>
     <style>
-body {
-    font-family: 'Just Me Again Down Here', cursive;
-}
 header {
     background-image: url(http://static.tumblr.com/3c7cd96cde56779343d2e9a22afec085/w5gxxfv/oCrn8vkw8/tumblr_static_9cxjqqnfamsccsg4ow84sg8kg.jpg);
     background-repeat: no-repeat;
@@ -45,16 +41,18 @@ function hoursAgo(datePosted, now){
   // If only there was a way to represent Dates and Times in JavaScript!
   return (now - datePosted).toHours(); // Maybe?
 }
-
-var datePostedCollection = document.getElementsByClassName('datePosted');
     </script>
   </head>
   <body>
     <header>
-        <nav><a href="#">Edit Theme</a> <a href="#">Follow</a> <a href="#">Dashboard</a></nav>
+      <!-- TODO: Style these links... -->
+      <!-- TODO: Add icons... -->
+      <nav><a href="#">Edit Theme</a> <a href="#">Follow</a> <a href="#">Dashboard</a></nav>
     </header>
     <div id="container">
-      <nav id="logo"><a href="http://theironyard.com"></a></nav>
+      <!-- TODO: Get the styling of the logo right... -->
+      <nav id="logo"><a href="http://theironyard.com"><img
+        src="http://static.tumblr.com/3c7cd96cde56779343d2e9a22afec085/w5gxxfv/oCrn8vkw8/tumblr_static_9cxjqqnfamsccsg4ow84sg8kg.jpg"></a></nav>
       <aside>
         <nav><a href="http://orlando.theironyard.com">The Iron Yard -- Orlando</a></nav>
         <p>Happenings and updates from The Iron Yard in Orlando, FL.</p>
@@ -65,26 +63,29 @@ var datePostedCollection = document.getElementsByClassName('datePosted');
         <article>
           <h1><a href="http://orlando.theironyard.com/post/100672003784/successful-orlando-tech-meetup-at-the-iron-yard">Successful Orlando Tech Meetup at The Iron Yard!</a></h1>
 
-          <p><???>By Susanna Miller, Campus Director</???></p>
+          <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address -->
+          <p><address>By Susanna Miller, Campus Director</address></p>
 
           <p>A great turnout on Friday at The Iron Yard Orlando to hear Matt Wallaert - kudos to the Orlando Tech Association for putting the event together! There were 65 attendees, and a fantastics Q&A afterwards. Looking forward to future events and collaboration with the Orlando Tech Association!</p>
 
           <p><img src="http://media.tumblr.com/e2250665076068f4f6a856187e14a00e/tumblr_inline_nduqyizSQT1t311sy.jpg"></p>
 
           <nav>
-            <a href="#" style="color: grey;">&#9829;</a>
-            <a href="#">&#8644;</a>
-            <a href="#">???</a>
+            <a class="fa fa-heart" href="#" style="color: grey;">favorite this</a>
+            <a class="fa fa-retweet" href="#">reblog this</a>
+            <a class="fa fa-share-square-o" href="#">share this</a>
           </nav>
 
-          <nav class="datePosted"><a href="http://orlando.theironyard.com/post/100672003784/successful-orlando-tech-meetup-at-the-iron-yard">2014-10-22 13:00:00</a></nav>
+          <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time -->
+          <nav><a href="http://orlando.theironyard.com/post/100672003784/successful-orlando-tech-meetup-at-the-iron-yard"><time>2014-10-22 13:00:00</time></a></nav>
         </article>
         <article>
           <h1><a href="http://orlando.theironyard.com/post/100672003784/successful-orlando-tech-meetup-at-the-iron-yard">Successful Orlando Tech Meetup at The Iron Yard!</a></h1>
 
-          <p><???>By Susanna Miller, Campus Director</???></p>
+          <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address -->
+          <p><address>By Susanna Miller, Campus Director</address><p>
 
-          <p><span class="fa fa-camera-retro fa-5x"></span>A great turnout on Friday at The Iron Yard Orlando to hear Matt Wallaert - kudos to the Orlando Tech Association for putting the event together! There were 65 attendees, and a fantastics Q&A afterwards. Looking forward to future events and collaboration with the Orlando Tech Association!</p>
+          <p>A great turnout on Friday at The Iron Yard Orlando to hear Matt Wallaert - kudos to the Orlando Tech Association for putting the event together! There were 65 attendees, and a fantastics Q&A afterwards. Looking forward to future events and collaboration with the Orlando Tech Association!</p>
 
           <p><img src="http://media.tumblr.com/e2250665076068f4f6a856187e14a00e/tumblr_inline_nduqyizSQT1t311sy.jpg"></p>
 
@@ -94,9 +95,10 @@ var datePostedCollection = document.getElementsByClassName('datePosted');
             <a href="#" class="fa fa-share-square-o">share this</a>
           </nav>
 
-          <nav class="datePosted"><a href="http://orlando.theironyard.com/post/100672003784/successful-orlando-tech-meetup-at-the-iron-yard">2014-10-22 13:00:00</a></nav>
+          <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time -->
+          <nav><a href="http://orlando.theironyard.com/post/100672003784/successful-orlando-tech-meetup-at-the-iron-yard"><time>2014-10-22 13:00:00</time></a></nav>
         </article>
       </section>
-    </div>
+    </div> <!-- #container -->
   </body>
 </html>
