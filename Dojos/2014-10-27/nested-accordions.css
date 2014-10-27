@@ -1,0 +1,23 @@
+.accordion {
+  list-style-type: none;
+}
+
+.accordion h3:before,
+.accordion h4:before {
+  padding-right: .5em;
+}
+
+.accordion h3:before {
+  content: '\02193';
+}
+
+.accordion h4:before {
+  content: '\2A01';
+}
+
+.accordion li > :first-child ~ * {
+  display: none; /* targets nested ul and its children */
+}
+.accordion li.accordion-open > :first-child ~ * {
+  display: block;
+}
