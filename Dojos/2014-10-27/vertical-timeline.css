@@ -1,0 +1,82 @@
+/**
+ * Colors:
+ *
+ * - light-blue: rgb(107, 191, 238)
+ * - dark-blue: rgb(52, 148, 203)
+ * - grayish blue: #BDD0DC (time)
+ */
+body {
+    font-size: 12pt;
+}
+
+#container {
+    width: 80%;
+    margin: auto;
+    outline: 2pt solid red;
+}
+
+ol {
+    border-left: 0.5em solid;
+    border-color: rgb(107, 191, 238);
+    padding-left: 1.5em;
+    margin-left: 8em;
+    list-style: none;
+}
+
+li {
+    position: relative;
+}
+
+li:before {
+    content: "\260E";
+    background-color: rgb(52, 148, 203);
+    text-align: center;
+
+    width: 2em; height: 2em;
+    line-height: 2em;
+
+    border: .5em solid rgb(107, 191, 238);
+    border-radius: 50%;
+
+    position: absolute;
+    left: -3.25em;
+}
+
+time {
+    display: block;
+    float: left;
+    position: absolute;
+    left: -8em;
+    text-align: right;
+}
+time > * {
+    display: block;
+}
+time small {
+    color: #BDD0DC;
+    font-size: 80%;
+}
+time big {
+    color: rgb(107, 191, 238);
+    font-size: 200%;
+}
+li:nth-child(even) time big {
+    color: rgb(52, 148, 203); /* dark blue */
+}
+
+article {
+    background-color: rgb(107, 191, 238); /* light blue */
+}
+article:after {
+    content: "\25C0";
+    color: rgb(107, 191, 238);
+    position: absolute;
+    top: 0; left: -0.8em;
+}
+/* http://css-tricks.com/how-nth-child-works/ */
+li:nth-child(even) article {
+    background-color: rgb(52, 148, 203); /* dark blue */
+}
+li:nth-child(even) article:after {
+    color: rgb(52, 148, 203); /* dark blue */
+}
