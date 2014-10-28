@@ -1,0 +1,130 @@
+/* Stolen directly from the Blueprint... */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+/**
+ * Colors:
+ *
+ * - light-blue: rgb(107, 191, 238)
+ * - dark-blue: rgb(52, 148, 203)
+ * - grayish blue: #BDD0DC (time)
+ */
+body {
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    color: #47a3da;
+}
+
+#container {
+    width: 80%; margin: auto;
+}
+
+.timeline {
+    border-left: 0.5em solid;
+    border-color: rgb(107, 191, 238);
+    padding-left: 2em;
+    margin-left: 8em;
+    list-style: none;
+}
+
+.timeline > li {
+    position: relative;
+    margin-top: 10pt;
+    color: white;
+}
+
+.timeline > li:before {
+    background-color: rgb(52, 148, 203);
+    text-align: center;
+
+    width: 2em; height: 2em;
+    line-height: 2em;
+
+    font-size: 110%;
+
+    border: 0.5em solid rgb(107, 191, 238);
+    border-radius: 50%;
+
+    position: absolute;
+    right: 100%; margin-right: 1em;
+}
+.timeline > li.call:before {
+    content: "\260E";
+}
+.timeline > li.flight:before {
+    content: '\2708';
+}
+.timeline > li.todo:before {
+    content: '\2714';
+}
+.timeline > li.email:before {
+    content: '\0040';
+}
+
+.timeline > li time {
+    display: block;
+    text-align: right;
+
+    position: absolute;
+    right: 100%; margin-right: 5em;
+}
+.timeline > li time > * {
+    display: block;
+}
+.timeline > li time small {
+    color: #BDD0DC;
+    font-size: 80%;
+}
+.timeline > li time big {
+    color: rgb(107, 191, 238);
+    font-size: 300%;
+}
+.timeline > li:nth-child(even) time big {
+    color: rgb(52, 148, 203); /* dark blue */
+}
+
+.timeline > li article {
+    background-color: rgb(107, 191, 238);
+    margin: 0; padding: 5pt 2em;
+    border-radius: 5pt;
+}
+.timeline > li article:after {
+    content: "\25C0";
+    color: rgb(107, 191, 238);
+    position: absolute;
+    top: 0.75em; right: 100%;
+    letter-spacing: -0.2em;
+}
+/* http://css-tricks.com/how-nth-child-works/ */
+.timeline > li:nth-child(even) article {
+    background-color: rgb(52, 148, 203); /* dark blue */
+}
+.timeline > li:nth-child(even) article:after {
+    color: rgb(52, 148, 203); /* dark blue */
+}
+
+.timeline > li article h3 {
+    padding-bottom: 5pt;
+    border-bottom: 1pt dotted;
+    margin-bottom: 10pt;
+}
+
+@media (max-width: 1048px) {
+    .timeline > li time big {
+        font-size: 200%;
+    }
+}
+@media (max-width: 768px) {
+    .timeline {
+        border: none;
+    }
+    .timeline > li:before {
+        position: static;
+        float: right;
+    }
+    .timeline > li time {
+        position: static;
+        float: left;
+    }
+    .timeline > li article {
+        clear: both;
+    }
+}
