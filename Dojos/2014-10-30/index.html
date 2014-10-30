@@ -12,8 +12,7 @@
 
       </li><!-- END Products -->
 
-      <li class="open">
-        <h3>Downloads</h3>
+      <li class="open"> <h3>Downloads</h3>
 
         <div class="submenu">
           <h4>Education &amp; Learning</h4>
@@ -83,30 +82,32 @@
         </div> <!-- .submenu -->
       </li><!-- END Applications -->
 
-        <li><h3> Projects</h3>
-        <h4>Learning &amp; Games</h4>
-        <ul>
-          <li>Catch the Bullet</li>
-          <li>Snoopydoo</li>
-          <li>Fallen Angel</li>
-          <li>Sui Maker</li>
-          <li>Wave Master</li>
-          <li>Golf Pro</li>
-        </ul>
-        <h4>Utilities</h4>
-        <ul>
-          <li>Gadget Finder</li>
-          <li>Green Tree Express</li>
-        </ul>
-        <h4>Entertainment</h4>
-        <ul>
-          <li>Gadget Finder</li>
-          <li>Green Tree Express</li>
-          <li>Green Tree Pro</li>
-          <li>Holy Cannoli</li>
-          <li>Wobbler 3.0</li>
-          <li>Coolkid</li>
-        </ul>
+      <li><h3> Projects</h3>
+        <div class="submenu">
+          <h4>Learning &amp; Games</h4>
+          <ul>
+            <li>Catch the Bullet</li>
+            <li>Snoopydoo</li>
+            <li>Fallen Angel</li>
+            <li>Sui Maker</li>
+            <li>Wave Master</li>
+            <li>Golf Pro</li>
+          </ul>
+          <h4>Utilities</h4>
+          <ul>
+            <li>Gadget Finder</li>
+            <li>Green Tree Express</li>
+          </ul>
+          <h4>Entertainment</h4>
+          <ul>
+            <li>Gadget Finder</li>
+            <li>Green Tree Express</li>
+            <li>Green Tree Pro</li>
+            <li>Holy Cannoli</li>
+            <li>Wobbler 3.0</li>
+            <li>Coolkid</li>
+          </ul>
+        </div>
       </li><!-- END Projects -->
 
       <li><h3> Freeware</h3>
@@ -144,6 +145,12 @@
 
 var navItems = document.getElementsByTagName('h3');
 
+// for each navItem in navItems...
+_.each(navItems, function(navItem){
+  // attach the event handler...
+  navItem.onclick = clickNavItem;
+});
+
 /**
  * If "this" `navItem` is "closed", make it "open"; if "this" `navItem` is "open"
  * make it "closed". If other `navItems` are "open" then close them, too.
@@ -155,67 +162,77 @@ var navItems = document.getElementsByTagName('h3');
  */
 function clickNavItem(event){
   // if "this" navItem is "closed"...
-  if ( navItem.parentElement.className !== 'open' ){
-    makeEverythingClosed(navItems);
-    makeItOpen(navItem.parentElement);
+  if ( isClosed(this.parentElement) ){
+    makeEverythingClosed(_.pluck(navItems, 'parentElement'));
+    makeItOpen(this.parentElement);
   // otherwise if "this" navItem is "open"
-  } else if ( navItem.parentElement.className === 'open' ){
-    makeItClosed(navItem.parentElement);
+  } else if ( isOpen(this.parentElement) ){
+    makeItClosed(this.parentElement);
   }
 }; // END clickNavItem
 
-// for each navItem in navItems...
-_.each(navItems, function(navItem){
-  // attach the event handler...
-  navItem.onclick = clickNavItem;
-});
+/*
+var allTheH3s = document.getElementsByTagName('h3'),
+    downloadH3 = allTheH3s[1];
+
+downloadH3.onclick = function(event){
+  makeEverythingClosed(_.pluck(allTheH3s, 'parentElement'));
+  // if anything is open...
+  //   make it closed.
+  // if downloads is open...
+  if ( isOpen(this.parentElement) ){
+    // make it closed.
+    makeItClosed(this.parentElement);
+  }
+  // if downloads is closed...
+  if ( isClosed(this.parentElement) ){
+    // make it open.
+    makeItOpen(this.parentElement);
+  }
+};
+*/
 
 /**
  * @param HTMLElement element
  * @return Boolean if `element` is "open"
  */
 function isOpen(element){
+  return (element.className === 'open');
 }
 /**
  * @param HTMLElement element
  * @return Boolean if `element` is "closed"
  */
 function isClosed(element){
-
+  // return element NOT open
+  return !isOpen(element);
 }
 
 function makeItOpen(element){
   element.className = 'open';
 }
 
+/**
+ * @param HTMLElement element
+ * @return undefined b/c it's a command, dammit
+ */
 function makeItClosed(element){
   element.className = '';
 }
 
+/**
+ * @param HTMLCollection elements to "close"
+ * @return undefined b/c it's a command
+ */
 function makeEverythingClosed(elements){
-  // for every element in elements
+  return _.each(elements, makeItClosed);
+
+  _.each(elements, function(element){
+    makeItClosed(element.parentElement);
+  });
   //  make it closed
 }
 
     </script>
   </body>
 </html>
-
-<!-- 
-                   _.-, 
-              _ .-'  / .._
-           .-:'/ - - \:::::-.
-         .::: '  e e  ' '-::::.
-        ::::'(    ^    )_.::::::
-       ::::.' '.  o   '.::::'.'/_
-   .  :::.'       -  .::::'_   _.:
- .-''---' .'|      .::::'   '''::::
-'. ..-:::'  |    .::::'        ::::
- '.' ::::    \ .::::'          ::::
-      ::::   .::::'           ::::
-       ::::.::::'._          ::::
-        ::::::' /  '-      .::::
-         '::::-/__    __.-::::'
-           '-::::::::::::::-'
-              '''::::'''
--->
