@@ -147,6 +147,7 @@ ul > li.octicon {
   jQuery.ajax('octocat.json', {
     success: function(data){
       console.log(data);
+
       jQuery('#avatar')
         .attr('href', data.avatar_url)
         .children('img')
@@ -154,10 +155,11 @@ ul > li.octicon {
       ; // END #avatar
 
       // TODO: Replace a bunch of stuff...
-      var sidebar = jQuery('.sidebar')
-        sidebar.children('h1')
-          .children('span').text(data.name)
-          .siblings('small').text(data.login)
+      var sidebar = jQuery('.sidebar');
+
+      sidebar.children('h1')
+        .children('span').text(data.name)
+        .siblings('small').text(data.login)
 
     } // END success
   }); // END jQuery.ajax
