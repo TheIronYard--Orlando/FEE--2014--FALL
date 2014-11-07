@@ -17,9 +17,16 @@ body > .container {
   font-size: 200%;
 }
 
-ul > li.octicon {
-  display: list-item;
+.bio li {
+  line-height: 2;
 }
+.bio .octicon:before {
+  display: inline-block;
+  color: gray;
+  width: 2em;
+  text-align: center;
+}
+
     </style>
   </head>
   <body>
@@ -38,12 +45,12 @@ ul > li.octicon {
 
           <hr>
 
-          <ul class="list-unstyled">
-            <li class="octicon octicon-organization"> {{company}}
-            <li class="octicon octicon-location"> {{location}}
-            <li class="octicon octicon-mail"> {{email}}
-            <li class="octicon octicon-link"> {{blog}}
-            <li class="octicon octicon-clock"> {{created_at}}... kinda
+          <ul class="bio list-unstyled">
+            <li> <i class="octicon octicon-organization"></i> {{company}}
+            <li> <i class="octicon octicon-location"></i> {{location}}
+            <li> <i class="octicon octicon-mail"></i> {{email}}
+            <li> <i class="octicon octicon-link"></i> {{blog}}
+            <li> <i class="octicon octicon-clock"></i> {{created_at}}... kinda
           </ul>
 
           <hr>
@@ -160,6 +167,16 @@ ul > li.octicon {
       sidebar.children('h1')
         .children('span').text(data.name)
         .siblings('small').text(data.login)
+
+      sidebar.children('.bio')
+        .find('li').each(function(){
+          console.log(arguments);
+        });
+
+      sidebar.children('.stats')
+        .find('big').each(function(){
+          console.log(arguments);
+        });
 
     } // END success
   }); // END jQuery.ajax
