@@ -1,0 +1,29 @@
+{
+  "name": "fee--2014--fall",
+  "version": "1.0.0",
+  "description": "I hope you're excited about this new possibility, this turning point in your career. I am. I'm really looking forward to meeting each of you in person and getting to know you better over the course of the upcoming 12 weeks. I'm also really excited about teaching and mentoring you all and seeing what awesome things you'll build and what interesting ways you'll approach the assignments and projects in the class.",
+  "main": "",
+  "dependencies": {
+    "chai": "^1.9.2",
+    "express": "^4.9.8",
+    "gulp": "^3.8.8",
+    "gulp-connect": "^2.2.0",
+    "gulp-open": "^0.3.0",
+    "lodash": "^2.4.1",
+    "normalize.css": "^3.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theironyard--orlando/fee--2014--fall.git"
+  },
+  "author": "David Rogers <david@theironyard.com>",
+  "license": "CC0",
+  "bugs": {
+    "url": "https://github.com/theironyard--orlando/fee--2014--fall/issues"
+  },
+  "homepage": "https://github.com/theironyard--orlando/fee--2014--fall"
+}
