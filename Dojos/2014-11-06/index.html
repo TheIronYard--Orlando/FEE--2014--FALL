@@ -61,7 +61,7 @@ body > .container {
             <a href="#" class="col-xs-4"><big>{{following}}</big> Following</a>
           </ul>
         </aside>
-        <section class="col-xs-8 col-sm-8 col-md-8">
+        <section class="main col-xs-8 col-sm-8 col-md-8">
           <ul class="nav nav-tabs">
             <li class="active"> <a href="#" class="octicon octicon-diff-added "> Contributions </a>
             <li> <a href="#"> Repositories </a>
@@ -182,6 +182,19 @@ body > .container {
   }); // END jQuery.ajax
 
   // TODO: Make tabs change when clicked...
+  jQuery('.main').each(function(){
+    var main = jQuery(this),
+        tabs = main.find('.nav.nav-tabs a')
+
+    tabs.click(function(event){
+        console.log(this, event); // Now what?
+
+        // TODO: Add "active" class to parent <li>
+        // TODO: Remove "active" class from other <li>'s
+        // TODO: Reveal corresponding "tab" section
+        // TODO: Hide other "tab" sections
+    }); // END click
+  }); // each(.main)
 })(); // END closure
 
     </script>
