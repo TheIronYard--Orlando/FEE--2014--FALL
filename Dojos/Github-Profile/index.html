@@ -162,35 +162,60 @@ body > .container {
     <script>
 
 ;(function(){ // closure
-  jQuery.ajax('octocat.json', {
-    success: function(data){
+  function getData(url){
+    return $.get(url)
+      .error(function(){
+        console.error('OMG! ' + url);
+      })
+      .always(function(){
+        console.debug(url, arguments);
+      });
+  }
+
+  function getUser(){
+    return getData('octocat.json');
+  }
+
+  function getRepos(){
+    return getData('octocat-repos.json');
+  }
+
+  function getStarred(){
+    return getData('octocat-starred.json');
+  }
+
+  getUser().done(function(data){
+    jQuery('#avatar')
+      .attr('href', data.avatar_url)
+      .children('img')
+        .attr('src', data.avatar_url)
+    ; // END #avatar
+
+    // TODO: Replace a bunch of stuff...
+    var sidebar = jQuery('.sidebar');
+
+    sidebar.children('h1')
+      .children('span').text(data.name)
+      .siblings('small').text(data.login)
+
+    sidebar.children('.bio')
+      .find('li').each(function(){
+        console.log(arguments);
+      });
+
+    sidebar.children('.stats')
+      .find('big').each(function(){
+        console.log(arguments);
+      });
+  }); // END getUser().done()
+
+  getRepos().done(function(data){
       console.log(data);
+  });
 
-      jQuery('#avatar')
-        .attr('href', data.avatar_url)
-        .children('img')
-          .attr('src', data.avatar_url)
-      ; // END #avatar
-
-      // TODO: Replace a bunch of stuff...
-      var sidebar = jQuery('.sidebar');
-
-      sidebar.children('h1')
-        .children('span').text(data.name)
-        .siblings('small').text(data.login)
-
-      sidebar.children('.bio')
-        .find('li').each(function(){
-          console.log(arguments);
-        });
-
-      sidebar.children('.stats')
-        .find('big').each(function(){
-          console.log(arguments);
-        });
-
-    } // END success
-  }); // END jQuery.ajax
+  getStarred().done(function(data){
+      console.log('this should never happen');
+  });
 
   // TODO: Make tabs change when clicked...
   var tabs = jQuery('.main > .main-tabs');
