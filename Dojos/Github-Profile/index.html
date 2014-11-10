@@ -1,0 +1,236 @@
+<!doctype>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- bower:css -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.1.2/octicons.min.css">
+    <!-- endbower -->
+    <style>
+body > .container {
+  min-width: 1020px;
+}
+
+.navbar-brand {
+  font-size: 4ex;
+}
+
+.stats big {
+  font-size: 200%;
+}
+
+.bio li {
+  line-height: 2;
+}
+.bio .octicon:before {
+  display: inline-block;
+  color: gray;
+  width: 2em;
+  text-align: center;
+}
+
+.tab-panel {
+  display: none;
+}
+.tab-panel.active {
+  display: block;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="row navbar navbar-default">
+        <div class="container">
+          <a class="navbar-brand octicon octicon-logo-github" href="#">
+            <span hidden>home</span></a>
+        </div>
+      </nav>
+      <div class="row">
+        <aside class="sidebar col-xs-4 col-sm-4 col-md-4">
+          <a href="#" class="thumbnail" id="avatar"><img></a>
+          <h1> <span>{{name}}</span> <br>
+            <small>{{login}}</small></h1>
+
+          <hr>
+
+          <ul class="bio list-unstyled">
+            <li> <i class="octicon octicon-organization"></i> {{company}}
+            <li> <i class="octicon octicon-location"></i> {{location}}
+            <li> <i class="octicon octicon-mail"></i> {{email}}
+            <li> <i class="octicon octicon-link"></i> {{blog}}
+            <li> <i class="octicon octicon-clock"></i> {{created_at}}... kinda
+          </ul>
+
+          <hr>
+
+          <nav class="stats text-center">
+            <a href="#" class="col-xs-4"><big>{{followers}}</big> Followers</a>
+            <a href="#" class="col-xs-4"><big>{{starred.length???}}</big> Starred</a>
+            <a href="#" class="col-xs-4"><big>{{following}}</big> Following</a>
+          </ul>
+        </aside>
+        <section class="main col-xs-8 col-sm-8 col-md-8">
+          <ul class="main-tabs nav nav-tabs">
+            <li class="active"> <a href="#tab-contributions" class="octicon octicon-diff-added "> Contributions </a>
+            <li> <a href="#tab-repositories"> Repositories </a>
+            <li> <a href="#tab-activity"> Public activity </a>
+          </ul>
+          <br>
+          <section class="active tab-panel col-xs-12 col-sm-12 col-md-12" id="tab-contributions">
+            <div class="panel panel-default" id="popular-repos">
+              <header class="panel-heading">
+                <h3 class="panel-title"> Popular Repositories </h3>
+              </header>
+
+              <nav class="list-group">
+                <a href="#" class="list-group-item">
+                  <span class="badge octicon octicon-star">123</span>
+                  <h4 class="list-group-item-heading octicon octicon-repo">
+                    Repository Name</h4>
+                  <p>This is the description of the repository.</p>
+                </a>
+                <a href="#" class="list-group-item">
+                  <span class="badge octicon octicon-star">123</span>
+                  <h4 class="list-group-item-heading octicon octicon-repo">
+                    Repository Name</h4>
+                  <p>This is the description of the repository.</p>
+                </a>
+                <a href="#" class="list-group-item">
+                  <span class="badge octicon octicon-star">123</span>
+                  <h4 class="list-group-item-heading octicon octicon-repo">
+                    Repository Name</h4>
+                  <p>This is the description of the repository.</p>
+                </a>
+              </nav>
+            </div> <!-- #popular-repos -->
+            <div class="panel panel-default" id="public-contribs">
+              <header class="panel-heading">
+                <h4 class="panel-title"> Public contributions </h4>
+              </header>
+
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <p> Contribution Graph ZOMG! </p>
+                </li>
+
+                <li class="list-group-item col-xs-4">
+                  <h6 class="list-group-item-heading"> Year of Contributions </h6>
+                </li>
+                <li class="list-group-item col-xs-4">
+                  <h6 class="list-group-item-heading"> Longest Streak </h6>
+                </li>
+                <li class="list-group-item col-xs-4">
+                  <h6 class="list-group-item-heading"> Current Streak </h6>
+                </li>
+                <li class="clearfix">
+              </ul>
+            </div> <!-- #public-contribs -->
+            <div>
+              <h4> Contribution activity </h4>
+
+              <div class="well">
+                <h5 class="big"> octocat has no activity during this period </h5>
+              </div>
+            </div>
+          </section> <!-- #tab-contributions -->
+          <section hidden class="tab-panel col-xs-12 col-sm-12 col-md-12" id="tab-repositories">
+            <ul class="list-group" id="repo-list">
+              <li class="list-group-item">
+                <h3 class="list-group-item-heading">Repository Name</h3>
+                <p> This is the repository description. </p>
+                <p class="muted">Updated on Month DD</p>
+              </li>
+            </ul> <!-- #repo-list -->
+          </section> <!-- #tab-repositories -->
+          <section hidden class="tab-panel col-xs-12 col-sm-12 col-md-12" id="tab-activity">
+            <ul class="list-unstyled">
+              <li> <span class="muted">on Sep 3</span>
+                <h5> <a href="#">octocat</a> pushed to
+                  <a href="#">change-the-title</a> at
+                  <a href="#">octocat/Spoon-Knife</a>
+                </h5>
+              </li>
+            </ul>
+          </section> <!-- #tab-activity -->
+        </section>
+      </div> <!-- .row -->
+    </div>
+    <!-- bower:js -->
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!-- endbower -->
+    <script>
+
+;(function(){ // closure
+  jQuery.ajax('octocat.json', {
+    success: function(data){
+      console.log(data);
+
+      jQuery('#avatar')
+        .attr('href', data.avatar_url)
+        .children('img')
+          .attr('src', data.avatar_url)
+      ; // END #avatar
+
+      // TODO: Replace a bunch of stuff...
+      var sidebar = jQuery('.sidebar');
+
+      sidebar.children('h1')
+        .children('span').text(data.name)
+        .siblings('small').text(data.login)
+
+      sidebar.children('.bio')
+        .find('li').each(function(){
+          console.log(arguments);
+        });
+
+      sidebar.children('.stats')
+        .find('big').each(function(){
+          console.log(arguments);
+        });
+
+    } // END success
+  }); // END jQuery.ajax
+
+  // TODO: Make tabs change when clicked...
+  var tabs = jQuery('.main > .main-tabs');
+
+  var links = tabs.find('li > a');
+
+  links.click(function(event){
+    var clickedLink = $(this);
+
+    var parentLI = clickedLink.parent();
+
+    var siblingLIs = parentLI.siblings();
+
+    // TODO: Add "active" class to parent <li>
+    parentLI.addClass('active');
+
+    // TODO: Remove "active" class from other <li>'s
+    siblingLIs.removeClass('active');
+
+    return false;
+    event.preventDefault();
+  });
+
+  links.click(function(event){
+    var panelID = $(this).attr('href');
+
+    var panel = $(panelID);
+
+    var others = panel.siblings('section');
+
+    // TODO: Reveal corresponding "tab" section
+    panel.addClass('active');
+
+    // TODO: Hide other "tab" sections
+    others.removeClass('active');
+
+  });
+
+})(); // END closure
+
+    </script>
+  </body>
+</html>
