@@ -35,7 +35,6 @@ body > .container {
 .tab-panel.active {
   display: block;
 }
-
     </style>
   </head>
   <body>
@@ -44,6 +43,16 @@ body > .container {
         <div class="container">
           <a class="navbar-brand octicon octicon-logo-github" href="#">
             <span hidden>home</span></a>
+          <form class="navbar-form" id="username-form">
+            <fieldset class="form-group">
+              <input type="text"
+                name="username" value="octocat"
+                class="form-control">
+            </fieldset>
+            <button class="btn btn-submit">
+              Change Usernane
+            </button>
+          </form>
         </div>
       </nav>
       <div class="row">
@@ -57,8 +66,8 @@ body > .container {
           <ul class="bio list-unstyled">
             <li> <i class="octicon octicon-organization"></i> {{company}}
             <li> <i class="octicon octicon-location"></i> {{location}}
-            <li> <i class="octicon octicon-mail"></i> {{email}}
-            <li> <i class="octicon octicon-link"></i> {{blog}}
+            <li> <i class="octicon octicon-mail"></i> <a href="mailto:{{email}}">{{email}}</a>
+            <li> <i class="octicon octicon-link"></i> <a href="{{blog}}">{{blog}}</a>
             <li> <i class="octicon octicon-clock"></i> {{created_at}}... kinda
           </ul>
 
@@ -66,18 +75,18 @@ body > .container {
 
           <nav class="stats text-center">
             <a href="#" class="col-xs-4"><big>{{followers}}</big> Followers</a>
-            <a href="#" class="col-xs-4"><big>{{starred.length???}}</big> Starred</a>
+            <a href="#" class="col-xs-4"><big>starred...???</big> Starred</a>
             <a href="#" class="col-xs-4"><big>{{following}}</big> Following</a>
           </ul>
         </aside>
         <section class="main col-xs-8 col-sm-8 col-md-8">
           <ul class="main-tabs nav nav-tabs">
-            <li class="active"> <a href="#tab-contributions" class="octicon octicon-diff-added "> Contributions </a>
-            <li> <a href="#tab-repositories"> Repositories </a>
+            <li> <a href="#tab-contributions" class="octicon octicon-diff-added "> Contributions </a>
+            <li class="active"> <a href="#tab-repositories"> Repositories </a>
             <li> <a href="#tab-activity"> Public activity </a>
           </ul>
           <br>
-          <section class="active tab-panel col-xs-12 col-sm-12 col-md-12" id="tab-contributions">
+          <section class="tab-panel col-xs-12 col-sm-12 col-md-12" id="tab-contributions">
             <div class="panel panel-default" id="popular-repos">
               <header class="panel-heading">
                 <h3 class="panel-title"> Popular Repositories </h3>
@@ -134,12 +143,12 @@ body > .container {
               </div>
             </div>
           </section> <!-- #tab-contributions -->
-          <section hidden class="tab-panel col-xs-12 col-sm-12 col-md-12" id="tab-repositories">
+          <section class="active tab-panel col-xs-12 col-sm-12 col-md-12" id="tab-repositories">
             <ul class="list-group" id="repo-list">
-              <li class="list-group-item">
-                <h3 class="list-group-item-heading">Repository Name</h3>
-                <p> This is the repository description. </p>
-                <p class="muted">Updated on Month DD</p>
+              <li class="template list-group-item">
+              <h3 class="list-group-item-heading">{{name}}</h3>
+                <p>{{description}}</p>
+                <p class="muted">Updated on <time>{{updated_at}}</p>
               </li>
             </ul> <!-- #repo-list -->
           </section> <!-- #tab-repositories -->
@@ -158,10 +167,16 @@ body > .container {
     </div>
     <!-- bower:js -->
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="/node_modules/lodash/lodash.js"></script>
     <!-- endbower -->
     <script>
 
 ;(function(){ // closure
+  _.templateSettings.interpolate = /{{([\s\S]+?)}}/g;
+
+  var userUrl = _.template('https://api.github.com/users/{{username}}');
+  var reposUrl = _.template('https://api.github.com/users/{{username}}/repos');
+
   function getData(url){
     return $.get(url)
       .error(function(){
@@ -172,50 +187,69 @@ body > .container {
       });
   }
 
-  function getUser(){
-    return getData('octocat.json');
+  function getUser(username){
+    return getData(userUrl({ username: username }));
   }
 
-  function getRepos(){
-    return getData('octocat-repos.json');
+  function getRepos(username){
+    return getData(reposUrl({ username: username }));
   }
 
-  function getStarred(){
-    return getData('octocat-starred.json');
+  function getAll(username){
+    return $.when(
+      getUser(username), getRepos(username)
+    );
   }
 
-  getUser().done(function(data){
-    jQuery('#avatar')
-      .attr('href', data.avatar_url)
+  getAll('octocat').done(updatePage);
+
+  function updatePage (user, repos){
+    var data = {
+      user: user[0],
+      repos: repos[0]
+    }
+    console.info(data);
+
+    $('#avatar')
+      .attr('href', data.user.avatar_url)
       .children('img')
-        .attr('src', data.avatar_url)
+        .attr('src', data.user.avatar_url)
     ; // END #avatar
 
     // TODO: Replace a bunch of stuff...
     var sidebar = jQuery('.sidebar');
 
     sidebar.children('h1')
-      .children('span').text(data.name)
-      .siblings('small').text(data.login)
+      .children('span').text(data.user.name)
+      .siblings('small').text(data.user.login)
 
-    sidebar.children('.bio')
-      .find('li').each(function(){
-        console.log(arguments);
-      });
+    sidebar.find('.bio > li').each(function(index, li){
+      var $li = $(li);
 
-    sidebar.children('.stats')
-      .find('big').each(function(){
-        console.log(arguments);
-      });
-  }); // END getUser().done()
+      var replaced = _.template($li.html(), data.user);
 
-  getRepos().done(function(data){
-      console.log(data);
-  });
+      $li.html(replaced);
 
-  getStarred().done(function(data){
-      console.log('this should never happen');
-  });
+      console.debug(replaced);
+    }); // END each(.bio > li)
+
+    var stats = sidebar.find('.stats');
+
+    stats.html(_.template(stats.html(), data.user));
+
+    /* === Repo Stuff === */
+    var $list = $('#repo-list'),
+        $template = $list.find('li.template')
+          .remove(); // Remove from the DOM
+
+    _.each(data.repos, function(repo){
+      var clone = $template.clone();
+
+      clone.html(_.template(clone.html(), repo));
+
+      $list.append(clone.removeClass('template'));
+    }); // END _.each(data.repos)
+  } // END updatePage
 
   // TODO: Make tabs change when clicked...
   var tabs = jQuery('.main > .main-tabs');
@@ -252,6 +286,17 @@ body > .container {
     // TODO: Hide other "tab" sections
     others.removeClass('active');
 
+  });
+
+  /* == DYNAMICALLY CHANGE USERNAME! == */
+  var $usernameForm = $('#username-form');
+
+  $usernameForm.submit(function(event){
+      var username = $usernameForm.find('input').val();
+
+      getAll(username).done(updatePage);
+
+      return false; // event.preventDefault();
   });
 
 })(); // END closure
