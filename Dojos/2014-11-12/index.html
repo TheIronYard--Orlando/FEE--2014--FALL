@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Responsive Full-Width Slider</title>
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/normalize.css/normalize.css" />
+    <!-- endbower -->
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="slider">
+        <nav>
+          <a href="#" class="prev btn btn-default">Previous</a>
+          <a href="#" class="next btn btn-default">Next</a>
+        </nav>
+        <ol class="list-inline slides">
+          <template>
+            <li> <a href="{{image.src}}"><img src="{{image.src}}"></a>
+          </template>
+        </ol>
+        <nav class="bullets">
+          <template>
+            <a href="#image-{{index}}" >{{index}}</a>
+          </template>
+        </nav>
+      </div> <!-- .slider -->
+    </div> <!-- .container-fluid -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+    <!-- endbower -->
+    <script>
+;(function(){ // CLOSURE
+  _.templateSettings.interpolate = /{{([\s\S]+?)}}/g;
+
+  var $slides = $('.slides'),
+      $slide = $($('.slides template').prop('content').children),
+      slideTpl = _.template($slide.html());
+
+  var images = [
+    { src: 'http://lorempixel.com/400/200/sports/1/' },
+    { src: 'http://lorempixel.com/400/200/sports/2/' },
+    { src: 'http://lorempixel.com/400/200/sports/3/' },
+    { src: 'http://lorempixel.com/400/200/sports/4/' },
+    { src: 'http://lorempixel.com/400/200/sports/5/' },
+    { src: 'http://lorempixel.com/400/200/sports/6/' },
+    { src: 'http://lorempixel.com/400/200/sports/7/' },
+    { src: 'http://lorempixel.com/400/200/sports/8/' },
+    { src: 'http://lorempixel.com/400/200/sports/9/' },
+    { src: 'http://lorempixel.com/400/200/sports/10/' }
+  ];
+
+  _.each(images, function(image){
+    $slide.clone()
+      .html(slideTpl({ image: image }))
+    .appendTo($slides);
+  });
+})(); // END CLOSURE
+    </script>
+  </body>
+</html>

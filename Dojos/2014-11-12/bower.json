@@ -1,0 +1,25 @@
+{
+  "name": "responsive-slider-2014-11-12",
+  "version": "0.0.0",
+  "homepage": "https://github.com/theironyard--orlando/fee--2014--fall",
+  "authors": [
+    "David Rogers <david@theironyard.com>"
+  ],
+  "main": "index.html",
+  "license": "GPL",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.3.0",
+    "normalize.css": "~3.0.2",
+    "lodash": "~2.4.1"
+  }
+}
