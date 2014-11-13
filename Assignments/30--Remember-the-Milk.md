@@ -1,4 +1,8 @@
-## TodoMVC
+## Review
+
+Today we talked about [User Stories](http://en.wikipedia.org/wiki/User_story) and the [Model-View-Controller](http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) pattern. In your teams, agree on a shared repository that everyone forks and clones, setup everyone's local clones with [git-flow](http://nvie.com/posts/a-successful-git-branching-model/), and start writing your project plan for the TodoMVC application, starting with the examples below.
+
+As a group, you should have a complete set of User Stories that describe the functionality; a breakdown of Models, Views, and Controllers; and a set of estimates and assignments. Tomorrow we'll discuss how you can organize your code files and use the features of jQuery to implement your features. Remember to pair up on tasks, pair promiscuously, and deploy often to the Github Pages (`gh-pages`) branch.
 
 ### All About User Stories
 
