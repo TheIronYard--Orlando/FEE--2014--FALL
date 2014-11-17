@@ -9,7 +9,7 @@
     <!-- endbower -->
 		<link rel="stylesheet" href="css/app.css">
 	</head>
-	<body>
+	<body ng-app="todomvc" ng-controller="Ctrl as taskList">
 		<section id="todoapp">
 			<header id="header">
 				<h1>todos</h1>
@@ -30,13 +30,15 @@
 						</div>
 						<input class="edit" value="Create a TodoMVC template">
 					</li>
-					<li>
+          <li ng-repeat="task in taskList.tasks"
+            ng-class="{ completed: task.completed, editing: task.editing }">
 						<div class="view">
-							<input class="toggle" type="checkbox">
-							<label>Rule the web</label>
+							<input class="toggle" type="checkbox" ng-model="task.completed">
+              <label ng-dblclick="taskList.startEdit($event, task)">{{task.text}}</label>
 							<button class="destroy"></button>
 						</div>
-						<input class="edit" value="Rule the web">
+            <input class="edit" value="{{task.text}}"
+              ng-keyup="taskList.cancelEdit($event, task)">
 					</li>
 				</ul>
 			</section>
@@ -71,6 +73,7 @@
 		<!-- Scripts here. Don't remove this ↓ -->
 		<script src="bower_components/todomvc-common/base.js"></script>
     <!-- bower:js -->
+    <script src="bower_components/angularjs/angular.js"></script>
     <!-- endbower -->
 		<script src="js/app.js"></script>
 	</body>
