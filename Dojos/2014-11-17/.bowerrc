@@ -1,7 +1,5 @@
 {
   "scripts": {
-    "postinstall": [
-      "wiredep -s pub/index.html"
-    ]
+    "postinstall": "wiredep -s index.html"
   }
 }
