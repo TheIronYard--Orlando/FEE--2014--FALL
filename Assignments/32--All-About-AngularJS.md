@@ -28,7 +28,7 @@ Complete your documentation from last night; add the following pieces:
 
 Knowing what you do now of Angular JS, Modules, Controllers, Expressions, and the `$http` service, rip all that jQuery junk out of your Github Profile! Get the profile column on the left working with Angular JS Expressions and a simple `$http` call to pull the JSON data from your local file.
 
-### Hello, Restangular! (https://github.com/mgonto/restangular)
+### Hello, [Restangular](https://github.com/mgonto/restangular)!
 
 Read through the documentation for Restangular, add it to your Github Profile project and wire it up using the [Quick Configuration (For Lazy Readers)](https://github.com/mgonto/restangular#quick-configuration-for-lazy-readers). Try replacing your `$http` calls with Restangular.
 
