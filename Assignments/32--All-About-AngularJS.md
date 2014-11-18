@@ -12,7 +12,7 @@ Complete your documentation from last night; add the following pieces:
 
 * directives
   * `form` -- you got it
-  * `input` -- and all variants [1](#footnotes)
+  * `input` -- and all variants [[1]](#footnotes)
   * `select`
   * `textarea`
   * `ngBlur`
