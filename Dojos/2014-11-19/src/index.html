@@ -1,0 +1,99 @@
+<!doctype html>
+<html class="no-js" ng-app="20141119">
+  <head>
+    <meta charset="utf-8">
+    <title>frontend</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css({.tmp,src}) styles/vendor.css -->
+    <link rel="stylesheet" href="app/vendor.css">
+
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css({.tmp,src}) styles/app.css -->
+    <link rel="stylesheet" href="app/index.css">
+    <!-- endbuild -->
+
+    <!-- build:js scripts/modernizr.js -->
+    <script src="../bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="container" ng-controller="MainCtrl">
+
+      <div ng-include="'components/navbar/navbar.html'"></div>
+      <header class="well row">
+        <form>
+          <fieldset class="form-group">
+            <label>What's on your mind?</label>
+            <textarea class="form-control"
+              ng-model="text"></textarea>
+          </fieldset>
+          <fieldset class="form-group">
+            <input type="text" ng-model="author"
+              class="form-control col-xs-10"
+              placeholder="Who are you?">
+              <button class="btn btn-primary col-xs-2">POST</button> <em>{{140 - text.length}} characters remaining</em>
+          </fieldset>
+          <blockquote>
+            <p>
+            {{text || 'Lorem ipsum...' | limitTo:140 }}
+            </p>
+            <cite>
+              &mdash; <strong>{{author || 'Your Name'}}</strong>
+              on <time>2014-11-20</time>
+            </cite>
+          </blockquote>
+        </form>
+      </header>
+      <section>
+        <blockquote ng-repeat="post in [ 1, 2, 3 ]">
+          <p>
+          {{"Come and dance on our floor. Take a step that is new. We've a loveable space that needs your face threes company too. These Happy Days are yours and mine Happy Days! Well the first thing you know ol' Jeds a millionaire. Kinfolk said Jed move away from there. And you know where you were then. Girls were girls and men were men. Mister we could use a man like Herbert Hoover again. Fish don't fry in the kitchen and beans don't burn on the grill. Took a whole lotta tryin' just to get up that hill." | limitTo:140 }}
+          </p>
+          <cite>
+            &mdash; <strong>author</strong>
+            on <time>{{"2014-11-12 13:00:00" | date}}</time>
+          </cite>
+        </blockquote>
+      </section>
+
+    </div> <!-- .container -->
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-placeholders/dist/placeholders-0.0.1-SNAPSHOT.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,src}) scripts/app.js -->
+    <script src="app/index.js"></script>
+    <script src="app/main/main.controller.js"></script>
+    <script src="components/navbar/navbar.controller.js"></script>
+
+    <!-- inject:partials -->
+    <!-- angular templates will be automaticaly converted in js and inserted here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+
+  </body>
+</html>
