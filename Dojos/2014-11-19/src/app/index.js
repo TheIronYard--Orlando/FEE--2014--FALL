@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('20141119', []);
+angular.module('github-comments', [ 'ngCookies' ]);
