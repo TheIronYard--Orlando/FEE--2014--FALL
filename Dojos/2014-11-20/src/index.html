@@ -28,57 +28,90 @@
     <![endif]-->
 
     <div class="container" ng-controller="MainCtrl as app">
+      <div class="columns profilecols js-username" data-name="al-the-x">
+        <div class="column one-fourth vcard" itemscope itemtype="http://schema.org/Person">
 
-  <div class="columns profilecols js-username" data-name="al-the-x">
-      <div class="column one-fourth vcard" itemscope itemtype="http://schema.org/Person">
           <a href="{{app.user.avatar_url}}" aria-hidden="true" class="vcard-avatar"
             itemprop="image"><img alt="" class="avatar" data-user="96015" height="230"
             src="{{app.user.avatar_url}}" width="230" /></a>
 
-        <h1 class="vcard-names">
-    <span class="vcard-fullname" itemprop="name">{{app.user.name}}</span>
-    <span class="vcard-username" itemprop="additionalName">{{app.user.login}}</span>
-  </h1>
+          <h1 class="vcard-names">
+            <span class="vcard-fullname" itemprop="name">{{app.user.name}}</span>
+            <span class="vcard-username" itemprop="additionalName">{{app.user.login}}</span>
+          </h1>
 
+          <ul class="vcard-details">
+            <li class="vcard-detail" itemprop="worksFor">{{app.user.company}}</li>
 
-  <ul class="vcard-details">
-        <li class="vcard-detail" itemprop="worksFor">{{app.user.company}}</li>
+            <li class="vcard-detail" itemprop="homeLocation">{{app.user.location}}</li>
+            <li class="vcard-detail"><span class="octicon octicon-mail"></span><a class="email"
+              href="mailto:{{app.user.email}}">{{app.user.email}}</a></li>
+            <li class="vcard-detail" itemprop="url"><span class="octicon octicon-link"></span><a
+              href="{{app.user.blog}}" class="url" rel="nofollow me">{{app.user.blog}}</a></li>
+            <li class="vcard-detail"><span class="octicon octicon-clock"></span><span class="join-label">Joined on </span><time class="join-date" datetime="2009-06-16T17:54:00Z" day="numeric" is="local-time" month="short" year="numeric">Jun 16, 2009</time></li>
+          </ul>
 
-    <li class="vcard-detail" itemprop="homeLocation">{{app.user.location}}</li>
-      <li class="vcard-detail"><span class="octicon octicon-mail"></span><a class="email"
-        href="mailto:{{app.user.email}}">{{app.user.email}}</a></li>
-    <li class="vcard-detail" itemprop="url"><span class="octicon octicon-link"></span><a
-      href="{{app.user.blog}}" class="url" rel="nofollow me">{{app.user.blog}}</a></li>
-    <li class="vcard-detail"><span class="octicon octicon-clock"></span><span class="join-label">Joined on </span><time class="join-date" datetime="2009-06-16T17:54:00Z" day="numeric" is="local-time" month="short" year="numeric">Jun 16, 2009</time></li>
-  </ul>
-
-
-        <div class="vcard-stats">
-          <a class="vcard-stat" href="/al-the-x/followers">
-            <strong class="vcard-stat-count">60</strong>
-            <span class="text-muted">followers</span>
-          </a>
-            <a class="vcard-stat" href="/stars/al-the-x">
-              <strong class="vcard-stat-count">111</strong>
-              <span class="text-muted">Starred</span>
+          <div class="vcard-stats">
+            <a class="vcard-stat" href="/al-the-x/followers">
+              <strong class="vcard-stat-count">60</strong>
+              <span class="text-muted">followers</span>
             </a>
-          <a class="vcard-stat" href="/al-the-x/following">
-            <strong class="vcard-stat-count">9</strong>
-            <span class="text-muted">Following</span>
-          </a>
-        </div>
+              <a class="vcard-stat" href="/stars/al-the-x">
+                <strong class="vcard-stat-count">111</strong>
+                <span class="text-muted">Starred</span>
+              </a>
+            <a class="vcard-stat" href="/al-the-x/following">
+              <strong class="vcard-stat-count">9</strong>
+              <span class="text-muted">Following</span>
+            </a>
+          </div> <!-- vcard-stats -->
 
           <div class="clearfix">
             <h3>Organizations</h3>
-              <a href="/orlandodojo" aria-label="orlandodojo" class="tooltipped tooltipped-n  avatar-group-item" itemprop="follows"><img alt="Orlando Dojo" class="avatar" data-user="311274" height="42" src="https://avatars1.githubusercontent.com/u/311274?v=3&amp;s=84" width="42" /></a>
-              <a href="/CodingDojo" aria-label="CodingDojo" class="tooltipped tooltipped-n  avatar-group-item" itemprop="follows"><img alt="Coding Dojo" class="avatar" data-user="383485" height="42" src="https://avatars2.githubusercontent.com/u/383485?v=3&amp;s=84" width="42" /></a>
-              <a href="/OrlandoPg" aria-label="OrlandoPg" class="tooltipped tooltipped-n  avatar-group-item" itemprop="follows"><img alt="OrlandoPg" class="avatar" data-user="663201" height="42" src="https://avatars2.githubusercontent.com/u/663201?v=3&amp;s=84" width="42" /></a>
-              <a href="/ethos-development" aria-label="ethos-development" class="tooltipped tooltipped-n  avatar-group-item" itemprop="follows"><img alt="ethos Development" class="avatar" data-user="975150" height="42" src="https://avatars0.githubusercontent.com/u/975150?v=3&amp;s=84" width="42" /></a>
-              <a href="/theironyard" aria-label="theironyard" class="tooltipped tooltipped-n  avatar-group-item" itemprop="follows"><img alt="The Iron Yard" class="avatar" data-user="2248433" height="42" src="https://avatars3.githubusercontent.com/u/2248433?v=3&amp;s=84" width="42" /></a>
-          </div>
-      </div>
-     </div>
-    </div> <!-- .columns -->
+            <a href="/orlandodojo" aria-label="orlandodojo" class="tooltipped tooltipped-n  avatar-group-item" itemprop="follows"><img alt="Orlando Dojo" class="avatar" data-user="311274" height="42" src="https://avatars1.githubusercontent.com/u/311274?v=3&amp;s=84" width="42" /></a>
+            <a href="/CodingDojo" aria-label="CodingDojo" class="tooltipped tooltipped-n  avatar-group-item" itemprop="follows"><img alt="Coding Dojo" class="avatar" data-user="383485" height="42" src="https://avatars2.githubusercontent.com/u/383485?v=3&amp;s=84" width="42" /></a>
+            <a href="/OrlandoPg" aria-label="OrlandoPg" class="tooltipped tooltipped-n  avatar-group-item" itemprop="follows"><img alt="OrlandoPg" class="avatar" data-user="663201" height="42" src="https://avatars2.githubusercontent.com/u/663201?v=3&amp;s=84" width="42" /></a>
+            <a href="/ethos-development" aria-label="ethos-development" class="tooltipped tooltipped-n  avatar-group-item" itemprop="follows"><img alt="ethos Development" class="avatar" data-user="975150" height="42" src="https://avatars0.githubusercontent.com/u/975150?v=3&amp;s=84" width="42" /></a>
+            <a href="/theironyard" aria-label="theironyard" class="tooltipped tooltipped-n  avatar-group-item" itemprop="follows"><img alt="The Iron Yard" class="avatar" data-user="2248433" height="42" src="https://avatars3.githubusercontent.com/u/2248433?v=3&amp;s=84" width="42" /></a>
+          </div> <!-- .clearfix -->
+        </div> <!-- .column -->
+
+        <div class="column three-fourths">
+          <div class="tabnav">
+            <div class="tabnav-right">
+              <span class="user-following-container">
+                <span class="follow">
+                  <a href="/login?return_to=%2Fal-the-x" class="minibutton primary">
+                    <span class="octicon octicon-person"></span>
+                    Follow
+                  </a>
+                </span>
+              </span>
+            </div> <!-- .tabnav-right -->
+
+            <ul class="tabnav-tabs" data-pjax role="navigation">
+              <li data-tab="contributions">
+              <a href="/al-the-x" class="tabnav-tab selected">
+                <span class="octicon octicon-diff-added"></span>
+                Contributions
+              </a>
+              </li>
+              <li data-tab="repo">
+              <a href="/al-the-x?tab=repositories" class="tabnav-tab ">
+                <span class="octicon octicon-repo"></span>
+                Repositories
+              </a>
+              </li>
+              <li data-tab="activity">
+              <a href="/al-the-x?tab=activity" class="tabnav-tab ">
+                <span class="octicon octicon-rss"></span>
+                Public activity
+              </a>
+              </li>
+            </ul>
+          </div> <!-- .tabnav -->
+        </div> <!-- .column -->
+      </div> <!-- .columns -->
     </div> <!-- .container -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
