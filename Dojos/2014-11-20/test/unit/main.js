@@ -23,7 +23,7 @@ describe('controllers', function(){
         { login: 'al-the-x' }
       ],
       [ 'GET', '/users/al-the-x/repos',
-        [ /* TODO: Put stuff here... */ ]
+        [ { name: 'some repo' } ]
       ]
     ].forEach(function(item){
       $httpBackend.when(item[0],
@@ -44,12 +44,23 @@ describe('controllers', function(){
 
       var MainCtrl = $controller('MainCtrl');
 
-      assert.deepEqual(MainCtrl.user, { });
+      assert.deepEqual(MainCtrl.user,
+        { repos: [ ] }
+      );
 
       $httpBackend.flush();
 
-      assert.equal(MainCtrl.user.login,
-        'al-the-x');
+      expect(MainCtrl.user.login)
+        .to.equal('al-the-x');
+
+      expect(MainCtrl.user.repos)
+        .to.have.length(1);
+
+      expect(MainCtrl.user.repos[0])
+        .to.have.property('name');
+
+      expect(MainCtrl.user.repos[0].name)
+        .to.equal('some repo');
   }));
 
   describe('MainCtrl', function(){
