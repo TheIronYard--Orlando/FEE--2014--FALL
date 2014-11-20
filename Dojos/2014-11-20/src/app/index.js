@@ -1,6 +1,8 @@
 'use strict';
 
-angular.module('github-profile', ['ngCookies', 'restangular', 'ui.router'])
+angular.module('github-profile', [
+    'ngCookies', 'restangular', 'ui.router'
+])
   /** // Don't need this... yet!
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
