@@ -25,10 +25,10 @@ angular.module('github-comments')
   .factory('User', function(Restangular){
     return Restangular.service('user');
   })
-  .factory('Gists', function(Restangular, API){
-      return Restangular.service('gists', API.gist);
+  .factory('Gist', function(Restangular, API){
+      return Restangular.one('gists', API.gist);
   })
-  .factory('Comments', function(Restangular, Gists){
-      return Restangular.service('comments', Gists);
+  .factory('GistComments', function(Restangular, Gist){
+      return Restangular.service('comments', Gist);
   })
 ; // END module
