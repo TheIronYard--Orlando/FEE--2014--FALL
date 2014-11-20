@@ -1,22 +1,25 @@
 'use strict';
 
 describe('controllers', function(){
-  var scope;
-
   beforeEach(module('github-profile'));
 
-  beforeEach(inject(function($rootScope) {
-  	scope = $rootScope.$new();
-  }));
+  describe('MainCtrl', function(){
+    var MainCtrl;
 
-  it('should define more than 5 awesome things', inject(function($controller) {
-    expect(scope.awesomeThings).toBeUndefined();
+    beforeEach(inject(function($controller){
+        MainCtrl = $controller('MainCtrl');
+    }));
 
-    $controller('MainCtrl', {
-      $scope: scope
-  	});
+    it('should define more than 5 awesome things', inject(function() {
+      expect(MainCtrl.comments.length).to.eq(0);
 
-    expect(angular.isArray(scope.awesomeThings)).toBeTruthy();
-    expect(scope.awesomeThings.length > 5).toBeTruthy();
-  }));
+      MainCtrl.addComment('some text');
+
+      expect(MainCtrl.comments.length).to.eq(1);
+
+      expect(MainCtrl.comments[0]).to.deep.eq({
+        body: 'some text'
+      });
+    }));
+  }); // END describe(MainCtrl)
 });

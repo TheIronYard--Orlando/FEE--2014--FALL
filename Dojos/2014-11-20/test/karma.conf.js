@@ -15,14 +15,8 @@ module.exports = function(config) {
 
     autoWatch : false,
 
-    frameworks: ['jasmine'],
+    frameworks: ['mocha', 'chai'],
 
     browsers : ['PhantomJS'],
-
-    plugins : [
-        'karma-phantomjs-launcher',
-        'karma-jasmine'
-    ]
   });
-
 };
