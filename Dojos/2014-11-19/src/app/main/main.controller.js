@@ -1,27 +1,26 @@
 'use strict';
 
 angular.module('github-comments')
-  .controller('MainCtrl', function($http, $interpolate, $cookies){
-      var apiUrl = 'https://api.github.com/gists/02be30f604c33f83b536/comments',
-          apiKeyTpl = $interpolate('?access_token={{key}}');
-
+  .controller('MainCtrl', function(Comments, Auth){
       var self = this;
 
-      this.apiKey = $cookies.apiKey;
+      /* // Instead of all this...
+      this.comments = [ ];
 
-      $http.get(apiUrl)
-        .success(function(data){
-          self.comments = data;
-        });
+      Comments.getList({
+        access_token: Auth.access_token
+      }).then(function(comments){
+        self.comments = comments;
+      });
+      // Do this... */
+      this.comments = Comments.getList({
+        access_token: Auth.access_token
+      }).$object;
 
-      this.addComment = function(text, apiKey){
-        var url = apiUrl + apiKeyTpl({ key: apiKey });
-
-        $cookies.apiKey = apiKey
-
-        $http.post(url, { body: text })
-          .success(function(data){
-            self.comments.push(data);
+      this.addComment = function(text, form){
+        form.$valid && Comments.post({ body: text })
+          .then(function(comment){
+            self.comments.push(comment);
           });
       };
   });
