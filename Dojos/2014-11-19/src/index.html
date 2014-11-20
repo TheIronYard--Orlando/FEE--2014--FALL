@@ -35,13 +35,14 @@
             <textarea class="form-control" required
               ng-model="text"></textarea>
           </fieldset>
-          <fieldset class="form-group">
+          <p class="input-group">
             <input type="text" ng-model="app.apiKey" required
-              class="form-control col-xs-10"
-              placeholder="Who are you? (gimme your API key)">
-              <button type="submit" class="btn btn-primary col-xs-2"
-              >POST</button> <em>{{140 - text.length}} characters remaining</em>
-          </fieldset>
+              class="form-control" placeholder="Who are you? (gimme your API key)">
+            <span class="input-group-btn">
+              <button type="submit" class="btn btn-primary">POST</button>
+            </span>
+          </p>
+          <p class="pull-right">{{140 - text.length}} characters remaining</p>
           <blockquote>
             <p>
             {{text || 'Lorem ipsum...' | limitTo:140 }}
