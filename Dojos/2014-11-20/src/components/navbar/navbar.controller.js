@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('20141120')
+angular.module('github-profile')
   .controller('NavbarCtrl', function ($scope) {
     $scope.date = new Date();
   });

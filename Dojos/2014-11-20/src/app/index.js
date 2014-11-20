@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('20141120', ['ngCookies', 'restangular', 'ui.router'])
+angular.module('github-profile', ['ngCookies', 'restangular', 'ui.router'])
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home', {

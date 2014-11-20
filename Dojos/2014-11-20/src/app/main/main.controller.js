@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('20141120')
+angular.module('github-profile')
   .controller('MainCtrl', function ($scope) {
     $scope.awesomeThings = [
       {

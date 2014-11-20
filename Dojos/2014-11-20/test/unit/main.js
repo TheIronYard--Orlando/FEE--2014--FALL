@@ -3,7 +3,7 @@
 describe('controllers', function(){
   var scope;
 
-  beforeEach(module('20141120'));
+  beforeEach(module('github-profile'));
 
   beforeEach(inject(function($rootScope) {
   	scope = $rootScope.$new();
