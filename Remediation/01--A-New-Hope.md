@@ -2,7 +2,7 @@
   * Create a new branch in Github from your current `master` branch
   * Push that branch into Github
   * Reset `master` back to the first commit
-* Build a _simple_ Jekyll theme for your site that matches [The Iron Yard's Tumblr theme](https://www.pixelunion.net/themes/tumblr/longform/) using HTML and CSS (kinda like [Build a Blog](https://github.com/TheIronYard--Orlando/FEE--2014--FALL/blob/master/Assignments/19--Build-a-Blog.md).
+* Build a _simple_ Jekyll theme for your site that matches [The Iron Yard's Tumblr theme](https://www.pixelunion.net/themes/tumblr/longform/) using HTML and CSS (kinda like [Build a Blog](https://github.com/TheIronYard--Orlando/FEE--2014--FALL/blob/master/Assignments/19--Build-a-Blog.md)).
   * Create a branch named `a-new-hope` in your `[username].github.io` repo
   * Commit your changes to the `a-new-hope` branch
   * Open a Pull Request from `a-new-hope` to `master` and link it to your WIP issue
