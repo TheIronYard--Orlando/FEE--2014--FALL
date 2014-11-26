@@ -1,4 +1,4 @@
-* Reset your `[username].github.io` **and** `TIY-Assignments` repo a la [Shake it Off](https://github.com/TheIronYard--Orlando/FEE--2014--FALL/blob/master/Assignments/04--Shake-it-off.md
+* Reset your `[username].github.io` **and** `TIY-Assignments` repo a la [Shake it Off](https://github.com/TheIronYard--Orlando/FEE--2014--FALL/blob/master/Assignments/04--Shake-it-off.md)
   * Create a new branch in Github from your current `master` branch
   * Push that branch into Github
   * Reset `master` back to the first commit
