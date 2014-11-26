@@ -4,6 +4,7 @@
 * Create a _blue_ Label called "Ready for Review"
 * Create _gray_ Labels for T-Shirt size estimates: S, M, L, XL, XXL
 * Create an Issue for each assignment _as you begin one_. No pre-emptive strikes.
+* Assign your WIP Issue to _me_ so that I can find it.
 * Open a PR appropriately and link it to your WIP issue.
 
 ### For each assignment:
