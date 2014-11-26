@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/theironyard--orlando/fee--2014--fall.png?label=ready&title=Ready)](https://waffle.io/theironyard--orlando/fee--2014--fall)
 ## Hello and welcome to the inaugural Front End Engineering Class in Orlando, FL!
 
 I hope you're excited about this new possibility, this turning point in your career. I am. I'm really looking forward to meeting each of you in person and getting to know you better over the course of the upcoming 12 weeks. I'm also really excited about teaching and mentoring you all and seeing what awesome things you'll build and what interesting ways you'll approach the assignments and projects in the class.
