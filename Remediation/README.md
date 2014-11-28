@@ -18,9 +18,11 @@
 
 ### Turn-in instructions:
 
-* Follow the same process for in-class turn-ins: open a PR, 2 :+1:'s, then merge.
+* Follow the same process for in-class turn-ins: open a PR, get 2 :+1:'s before merging
+* Assign the "Ready to Review" label to your WIP issue and PR when you're ready for me to review.
 * _Every weekday_: check in via HipChat at 08:10, standup at 09:30, retro at 15:30; do not be late.
 
 ### Important!
 
-* Call for help via HipChat if you encounter a blocker. **Don't go more than 1 Pomodoro (25 min) stuck on something!**
+* Call for help via HipChat if you encounter a blocker. 
+* **Don't go more than 1 Pomodoro (25 min) stuck on something!**
