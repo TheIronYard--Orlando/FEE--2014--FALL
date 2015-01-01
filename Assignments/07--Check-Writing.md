@@ -4,7 +4,7 @@
   * [Conway's Game of Life](http://en.wikipedia.org/wiki/Conway's_Game_of_Life)
   * [Node JS: Assert](http://nodejs.org/api/assert.html)
 * Coding Dojo:
-  * See instructions in [`Dojos/2014-10-01.js`](/TheIronYard--Orlando/FEE--2014--FALL/blob/master/Dojos/2014-10-01.js)
+  * See instructions in [`Dojos/2014-10-01.js`](https://github.com/TheIronYard--Orlando/FEE--2014--FALL/blob/master/Dojos/2014-10-01.js)
   * Pair up using Ping-Pong, remember to commit frequently and switch pairs so both partners have code.
   * **Red-Green-Refactor!** Write tests first!
 * Conway's Game of Life:
