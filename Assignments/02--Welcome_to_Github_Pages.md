@@ -1,6 +1,6 @@
 ## Welcome to Github Pages!
 
-* [ ] Learn about Github Pages...
+* [X] Learn about Github Pages...
   * Read the basic instructions on http://pages.github.com/
   * Read [User, Organization, and Project Pages](https://help.github.com/articles/user-organization-and-project-pages)
   * Read [Creating Pages with the automatic page generator](https://help.github.com/articles/creating-pages-with-the-automatic-generator)
